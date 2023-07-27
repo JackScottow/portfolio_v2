@@ -4,7 +4,7 @@ const Landing = () => {
       <header>
         <h1>Hello!</h1>
 
-        <h2>I'm Jack Scottow, a London based front-end software engineer focused on building beautiful interfaces &amp; experiences</h2>
+        <h2>Im Jack Scottow, a London based front-end software engineer focused on building beautiful interfaces &amp; experiences</h2>
 
         <h3>
           Get in touch
