@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <main className="flex md:flex-col ">
+    <main className="flex ">
       <NavBar />
       <div className="grow ">
         <Landing />
