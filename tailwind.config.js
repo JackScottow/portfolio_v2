@@ -5,5 +5,8 @@ module.exports = {
     extend: {},
     fontFamily: { sans: ["Open Sans", "sans-serif"] },
   },
-  plugins: [],
+  plugins: [
+    // ...
+    require("@tailwindcss/aspect-ratio"),
+  ],
 };
