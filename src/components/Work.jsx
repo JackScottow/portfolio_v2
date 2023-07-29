@@ -56,7 +56,7 @@ const Work = () => {
           </div>
           <ul role="list" className="space-y-12 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
             {projects.map((project) => (
-              <li key={project.name} className="p-4 transition-transform duration-200 rounded hover:scale-105 hover:shadow-md hover:shadow-slate-800 bg-slate-800">
+              <li key={project.name} className="pt-4 pb-6 transition-transform duration-200 rounded hover:scale-105 hover:shadow-md hover:shadow-slate-800 bg-slate-800">
                 <div className="space-y-4">
                   <div className="aspect-w-3 aspect-h-2">
                     <img className="object-cover rounded shadow-2xl" src={project.imageUrl} alt="" />
