@@ -63,7 +63,7 @@ const Sidebar = () => {
 
       {/* Mobile Drawer */}
 
-      <div className={`${isMobileDrawerOpen ? "translate-y-0 top-0" : " -translate-y-full -top-full"} fixed  right-0 bg-slate-900 text-gray-100 h-fit w-full transition-transform duration-250 ease-in-out`}>
+      <div className={`${isMobileDrawerOpen ? "translate-y-0 top-0" : " -translate-y-full -top-full"} fixed  right-0 bg-slate-900 text-gray-100 h-fit w-full transition-transform duration-250 ease-in-out z-50`}>
         <ul className="pt-16 text-center ">
           <Link href="#home" onClick={closeMobileDrawer}>
             <li className="px-10 py-5 text-xl font-normal transition-all duration-300 ease-in hover:bg-teal-300 hover:text-slate-900 ">Home</li>
