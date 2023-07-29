@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import Image from "next/image";
 
 const projects = [
@@ -77,7 +77,7 @@ const Work = () => {
                       <li>
                         <a href={project.liveUrl} className="px-5 text-gray-300 hover:text-teal-300">
                           <span className="sr-only">LinkedIn</span>
-                          <FontAwesomeIcon icon={faArrowRightLong} size="2xl" />
+                          <FontAwesomeIcon icon={faUpRightFromSquare} size="2xl" />
                         </a>
                       </li>
                     </ul>
