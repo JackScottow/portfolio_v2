@@ -57,7 +57,7 @@ const projects = [
     name: "Dynamic Landing Page",
     tech: "HTML / JS / CSS",
     imageUrl: "../project_images/dynamiclandingpage.png",
-    description: 'A dynamic landing page inspired by the chrome extension "Moment"',
+    description: "A dynamic landing page",
     githubUrl: "https://github.com/JackScottow/Dynamic-Landing-Page",
     liveUrl: "https://dynamic-landing-page.jackscottow.com/",
   },
