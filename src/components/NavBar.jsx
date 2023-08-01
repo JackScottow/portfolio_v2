@@ -43,27 +43,27 @@ const Sidebar = () => {
           {/* Add more links as needed */}
         </ul>
         <div className="flex px-2 py-3 justify-evenly">
-          <Tooltip title="GitHub" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="GitHub" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://github.com/JackScottow" target="_blank">
               <FontAwesomeIcon icon={faGithub} size="xl" className="transition duration-300 ease-in hover:text-teal-300 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://twitter.com/jms__1991" target="_blank">
               <FontAwesomeIcon icon={faTwitter} size="xl" className="transition duration-300 ease-in hover:text-teal-300 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://www.instagram.com/jackms91" target="_blank">
               <FontAwesomeIcon icon={faInstagram} size="xl" className="transition duration-300 ease-in hover:text-teal-300 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} size="xl" className="transition duration-300 ease-in hover:text-teal-300 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="mailto:j.scottow@gmail.com" target="_blank">
               <FontAwesomeIcon icon={faEnvelopeOpen} size="xl" className="transition duration-300 ease-in hover:text-teal-300 hover:scale-125" />
             </Link>
@@ -94,27 +94,27 @@ const Sidebar = () => {
           {/* Add more links as needed */}
         </ul>
         <div className="flex px-2 py-6 justify-evenly">
-          <Tooltip title="GitHub" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="GitHub" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://github.com/JackScottow" target="_blank">
               <FontAwesomeIcon icon={faGithub} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://twitter.com/jms__1991" target="_blank">
               <FontAwesomeIcon icon={faTwitter} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://www.instagram.com/jackms91" target="_blank">
               <FontAwesomeIcon icon={faInstagram} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank">
               <FontAwesomeIcon icon={faLinkedin} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
             </Link>
           </Tooltip>
-          <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+          <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
             <Link href="mailto:j.scottow@gmail.com" target="_blank">
               <FontAwesomeIcon icon={faEnvelopeOpen} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
             </Link>

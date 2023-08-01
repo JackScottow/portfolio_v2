@@ -13,32 +13,32 @@ const About = () => {
           </div>
           <div className="mt-8 grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
             <div className="flex justify-center col-span-1 px-8 py-8 ">
-              <Tooltip title="React" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+              <Tooltip title="React" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
                 <FontAwesomeIcon icon={faReact} size="4x" />
               </Tooltip>
             </div>
             <div className="flex justify-center col-span-1 px-8 py-8 ">
-              <Tooltip title="JavaScript" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+              <Tooltip title="JavaScript" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
                 <FontAwesomeIcon icon={faSquareJs} size="4x" />{" "}
               </Tooltip>
             </div>
             <div className="flex justify-center col-span-1 px-8 py-8 ">
-              <Tooltip title="NodeJS" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+              <Tooltip title="NodeJS" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
                 <FontAwesomeIcon icon={faNodeJs} size="4x" />{" "}
               </Tooltip>
             </div>
             <div className="flex justify-center col-span-1 px-8 py-8 ">
-              <Tooltip title="CSS3" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+              <Tooltip title="CSS3" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
                 <FontAwesomeIcon icon={faCss3} size="4x" />{" "}
               </Tooltip>
             </div>
             <div className="flex justify-center col-span-1 px-8 py-8 ">
-              <Tooltip title="HTML5" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+              <Tooltip title="HTML5" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
                 <FontAwesomeIcon icon={faHtml5} size="4x" />{" "}
               </Tooltip>
             </div>
             <div className="flex justify-center col-span-1 px-8 py-8 ">
-              <Tooltip title="Git" placement="top" disableInteractive TransitionComponent={Zoom} arrow>
+              <Tooltip title="Git" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0}>
                 <FontAwesomeIcon icon={faGithub} size="4x" />{" "}
               </Tooltip>
             </div>
