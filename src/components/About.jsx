@@ -19,6 +19,8 @@ const About = () => {
               <li>NodeJS</li>
               <li>Git</li>
               <li>Shopify</li>
+              <li>Tailwind</li>
+              <li>Bootstrap</li>
             </ul>
           </div>
           <div className=" grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
