@@ -10,7 +10,7 @@ const Contact = () => {
       <div className="relative mx-auto my-auto lg:grid lg:grid-cols-5">
         <div className="px-10 py-8 lg:col-span-2 lg:px-auto lg:py-auto ">
           <div className="max-w-lg mx-auto">
-            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">Get in touch!</h2>
+            <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch!</h2>
             <p className="max-w-3xl mt-5 text-lg text-gray-300">Contact me on my socials or leave a message!</p>
             <div className="flex justify-between pt-8">
               <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
@@ -58,7 +58,7 @@ const Contact = () => {
                 <textarea id="message" name="message" rows={4} className="box-border block w-full px-4 py-3 placeholder-gray-400 border-teal-500 rounded shadow-sm focus:border-teal-500 focus-ring-teal-500 focus:border-2" placeholder="Message" defaultValue={""} />
               </div>
               <div className="flex">
-                <button type="submit" className="inline-flex justify-center px-6 py-3 mx-auto font-semibold bg-teal-300 border border-transparent rounded shadow-sm text-slate-900 hover:scale-105 focus:outline-none">
+                <button type="submit" className="inline-flex justify-center px-6 py-3 mx-auto font-medium bg-teal-300 border border-transparent rounded shadow-sm text-slate-900 hover:scale-105 focus:outline-none">
                   Submit
                 </button>
               </div>

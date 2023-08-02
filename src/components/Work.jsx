@@ -1,7 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import Image from "next/image";
 
 const projects = [
   {
@@ -69,7 +68,7 @@ const Work = () => {
       <div className="px-6 mx-auto my-auto max-w-7xl lg:px-8">
         <div className="">
           <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-            <h2 className="py-4 text-3xl font-bold tracking-tight sm:text-4xl">My Work</h2>
+            <h2 className="py-4 text-3xl font-medium tracking-tight sm:text-4xl">My Work</h2>
           </div>
           <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
             {projects.map((project) => (

@@ -123,10 +123,10 @@ const Sidebar = () => {
       </div>
 
       {/* Mobile Toggle Button */}
-      <div className="fixed top-0 right-0 z-50 w-full p-2 md:hidden">
+      <div className="fixed top-0 right-0 z-50 w-full md:hidden">
         <div></div>
         <button className="fixed top-0 right-0 p-5 rounded-xl focus:outline-none" onClick={toggleMobileDrawer}>
-          {isMobileDrawerOpen ? <FontAwesomeIcon icon={faXmark} size="xl" className="p-2 text-white" /> : <FontAwesomeIcon icon={faBars} size="xl" className="p-2 text-white" />}
+          {isMobileDrawerOpen ? <FontAwesomeIcon icon={faXmark} size="xl" className="text-gray-300" /> : <FontAwesomeIcon icon={faBars} size="xl" className="text-gray-300" />}
         </button>
       </div>
     </div>
