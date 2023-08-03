@@ -15,7 +15,8 @@ const About = () => {
             <ul className="grid grid-cols-2 mt-5 text-left list-disc list-inside gap-x-12 gap-y-1">
               <li>HTML/CSS/JS</li>
               <li>React/NextJS</li>
-              <li>SASS</li>
+              <li>TypeScript</li>
+              <li>SASS/SCSS</li>
               <li>NodeJS</li>
               <li>Git</li>
               <li>Shopify</li>
