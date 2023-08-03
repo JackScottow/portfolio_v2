@@ -96,13 +96,13 @@ const Work = () => {
                       </div>
                       <ul role="list" className="flex justify-center p-4 ">
                         <li>
-                          <Link href={project.githubUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300">
+                          <Link href={project.githubUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300" alt="github">
                             <span className="sr-only">GitHub</span>
                             <FontAwesomeIcon icon={faGithub} size="2xl" />
                           </Link>
                         </li>
                         <li>
-                          <Link href={project.liveUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300">
+                          <Link href={project.liveUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300" alt="live">
                             <span className="sr-only">LinkedIn</span>
                             <FontAwesomeIcon icon={faUpRightFromSquare} size="2xl" />
                           </Link>

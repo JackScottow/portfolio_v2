@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact, faSquareJs, faNodeJs, faCss3, faHtml5, faShopify } from "@fortawesome/free-brands-svg-icons";
-import { faChevronCircleDown } from "@fortawesome/free-solid-svg-icons";
 import { Tooltip, Zoom } from "@mui/material";
 import Link from "next/link";
 

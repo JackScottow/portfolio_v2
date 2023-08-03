@@ -14,22 +14,22 @@ const Contact = () => {
             <p className="max-w-3xl mt-5 text-lg text-gray-300">Contact me on my socials or leave a message!</p>
             <div className="flex justify-between pt-8">
               <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
-                <Link href="mailto:j.scottow@gmail.com" target="_blank">
+                <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email">
                   <FontAwesomeIcon icon={faEnvelopeOpen} size="3x" />
                 </Link>
               </Tooltip>
               <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
-                <Link href="https://twitter.com/jms__1991" target="_blank">
+                <Link href="https://twitter.com/jms__1991" target="_blank" alt="twitter">
                   <FontAwesomeIcon icon={faTwitter} size="3x" />
                 </Link>
               </Tooltip>
               <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
-                <Link href="https://www.instagram.com/jackms91" target="_blank">
+                <Link href="https://www.instagram.com/jackms91" target="_blank" alt="instagram">
                   <FontAwesomeIcon icon={faInstagram} size="3x" />
                 </Link>
               </Tooltip>
               <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
-                <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank">
+                <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin">
                   <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </Link>
               </Tooltip>
