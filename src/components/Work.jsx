@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
 const projects = [
   {
@@ -60,6 +62,14 @@ const projects = [
     githubUrl: "https://github.com/JackScottow/Dynamic-Landing-Page",
     liveUrl: "https://dynamic-landing-page.jackscottow.com/",
   },
+  {
+    name: "Pro Tips",
+    tech: "HTML / JS / CSS / AdviceSlip API",
+    imageUrl: "../project_images/pro-tips.png",
+    description: "A simple random quote generator",
+    githubUrl: "https://github.com/JackScottow/Random-Quote-Generator",
+    liveUrl: "https://pro-tips.jackscottow.com/",
+  },
 ];
 
 const Work = () => {
@@ -72,34 +82,36 @@ const Work = () => {
           </div>
           <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
             {projects.map((project) => (
-              <li key={project.name} className="p-4 transition-transform duration-200 rounded hover:scale-105 bg-slate-800">
-                <div className="space-y-4">
-                  <div className="aspect-w-3 aspect-h-2">
-                    <img className="object-cover rounded shadow-2xl" src={project.imageUrl} alt={project.name} />
-                  </div>
-                  <div className="space-y-2">
-                    <div className="px-3 space-y-1 font-medium leading-6 text-center">
-                      <h3 className="text-2xl">{project.name}</h3>
-                      <p className="text-sm text-gray-300 ">{project.tech}</p>
-                      <p className="text-gray-300">{project.description}</p>
+              <motion.div initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeIn", duration: 0.3 }} key={project.name}>
+                <li className="p-4 transition-transform duration-200 rounded hover:scale-105 bg-slate-800">
+                  <div className="space-y-4">
+                    <div className="aspect-w-3 aspect-h-2">
+                      <img className="object-cover rounded shadow-2xl" src={project.imageUrl} alt={project.name} />
                     </div>
-                    <ul role="list" className="flex justify-center p-4 ">
-                      <li>
-                        <a href={project.githubUrl} className="px-4 text-gray-300 hover:text-teal-300">
-                          <span className="sr-only">GitHub</span>
-                          <FontAwesomeIcon icon={faGithub} size="2xl" />
-                        </a>
-                      </li>
-                      <li>
-                        <a href={project.liveUrl} className="px-4 text-gray-300 hover:text-teal-300">
-                          <span className="sr-only">LinkedIn</span>
-                          <FontAwesomeIcon icon={faUpRightFromSquare} size="2xl" />
-                        </a>
-                      </li>
-                    </ul>
+                    <div className="space-y-2">
+                      <div className="px-3 space-y-1 font-medium leading-6 text-center">
+                        <h3 className="text-2xl">{project.name}</h3>
+                        <p className="text-sm text-gray-300 ">{project.tech}</p>
+                        <p className="text-gray-300">{project.description}</p>
+                      </div>
+                      <ul role="list" className="flex justify-center p-4 ">
+                        <li>
+                          <Link href={project.githubUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300">
+                            <span className="sr-only">GitHub</span>
+                            <FontAwesomeIcon icon={faGithub} size="2xl" />
+                          </Link>
+                        </li>
+                        <li>
+                          <Link href={project.liveUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300">
+                            <span className="sr-only">LinkedIn</span>
+                            <FontAwesomeIcon icon={faUpRightFromSquare} size="2xl" />
+                          </Link>
+                        </li>
+                      </ul>
+                    </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </motion.div>
             ))}
           </ul>
         </div>
