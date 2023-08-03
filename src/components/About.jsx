@@ -11,8 +11,8 @@ const About = () => {
         <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
           <div>
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Me</h2>
-            <p className="max-w-3xl mt-3 text-lg text-gray-300">Hi there! I&apos;m Jack, a front-end developer based near London specialising in React. I have expertise in a wide range of web technologies and I&apos;m passionate about creating beautiful and functional websites. Feel free to check out some of my work! </p>
-            <ul className="grid grid-cols-2 pl-5 mt-5 text-justify list-disc gap-y-2">
+            <p className="max-w-3xl mt-3 text-lg text-gray-300">Hi there! I&apos;m Jack, a front-end developer based near London specialising in React. I have expertise in a wide range of web technologies and I&apos;m passionate about creating amazing user experiences. Feel free to check out some of my work! </p>
+            <ul className="grid grid-cols-2 mt-5 text-left list-disc list-inside gap-x-12 gap-y-1">
               <li>HTML/CSS/JS</li>
               <li>React/NextJS</li>
               <li>SASS</li>
@@ -21,6 +21,7 @@ const About = () => {
               <li>Shopify</li>
               <li>Tailwind</li>
               <li>Bootstrap</li>
+              <li>RESTful APIs</li>
             </ul>
           </div>
           <div className=" grid grid-cols-2 gap-0.5 md:grid-cols-3 lg:mt-0 lg:grid-cols-2">
