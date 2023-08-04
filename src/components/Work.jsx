@@ -83,10 +83,10 @@ const Work = () => {
           <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
             {projects.map((project) => (
               <motion.div initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeIn", duration: 0.3 }} key={project.name}>
-                <li className="p-4 transition-transform duration-200 rounded hover:scale-105 bg-slate-800">
+                <li className="transition-transform duration-300 ease-in-out border border-gray-700 rounded-md lg:hover:scale-110 bg-slate-800">
                   <div className="space-y-4">
                     <div className="aspect-w-3 aspect-h-2">
-                      <img className="object-cover rounded shadow-2xl" src={project.imageUrl} alt={project.name} />
+                      <img className="object-cover border-b border-gray-700 rounded-t-md" src={project.imageUrl} alt={project.name} />
                     </div>
                     <div className="space-y-2">
                       <div className="px-3 space-y-1 font-medium leading-6 text-center">

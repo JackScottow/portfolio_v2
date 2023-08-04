@@ -20,7 +20,7 @@ const Sidebar = () => {
   return (
     <div className="flex flex-col">
       {/* Desktop Sidebar */}
-      <aside className="sticky top-0 flex-col justify-between flex-shrink-0 hidden w-64 h-screen text-gray-300 border-r-2 bg-slate-900 md:flex border-r-teal-100">
+      <aside className="sticky top-0 flex-col justify-between flex-shrink-0 hidden w-64 h-screen text-gray-300 border-r bg-slate-900 md:flex border-r-teal-300">
         {/* Sidebar content */}
         {/* Add your sidebar navigation links here */}
         <ul className="hidden text-center md:block">
@@ -73,7 +73,7 @@ const Sidebar = () => {
 
       {/* Mobile Drawer */}
 
-      <div className={`${isMobileDrawerOpen ? "translate-y-0 top-0" : " -translate-y-full -top-full"} fixed  right-0 bg-slate-900 text-gray-100 h-fit w-full transition-transform duration-250 ease-in-out border-b-2 border-teal-200 z-40`}>
+      <div className={`${isMobileDrawerOpen ? "translate-y-0 top-0" : " -translate-y-full -top-full"} fixed  right-0 bg-slate-900 text-gray-100 h-fit w-full transition-transform duration-250 ease-in-out border-b border-teal-300 z-40`}>
         <ul className="pt-16 text-center ">
           <Link href="#home" onClick={closeMobileDrawer} alt="home">
             <li className="px-10 py-5 text-xl font-normal transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Home</li>

@@ -6,29 +6,29 @@ import { Tooltip, Zoom } from "@mui/material";
 
 const Contact = () => {
   return (
-    <div className="flex min-h-screen py-20" id="contact">
+    <div className="flex min-h-screen" id="contact">
       <div className="relative mx-auto my-auto lg:grid lg:grid-cols-5">
         <div className="px-10 py-8 lg:col-span-2 lg:px-auto lg:py-auto ">
           <div className="max-w-lg mx-auto">
             <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch!</h2>
             <p className="max-w-3xl mt-5 text-lg text-gray-300">Contact me on my socials or leave a message!</p>
             <div className="flex justify-between pt-8">
-              <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
+              <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
                 <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email">
                   <FontAwesomeIcon icon={faEnvelopeOpen} size="3x" />
                 </Link>
               </Tooltip>
-              <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
+              <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
                 <Link href="https://twitter.com/jms__1991" target="_blank" alt="twitter">
                   <FontAwesomeIcon icon={faTwitter} size="3x" />
                 </Link>
               </Tooltip>
-              <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
+              <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
                 <Link href="https://www.instagram.com/jackms91" target="_blank" alt="instagram">
                   <FontAwesomeIcon icon={faInstagram} size="3x" />
                 </Link>
               </Tooltip>
-              <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out hover:scale-110">
+              <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
                 <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin">
                   <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </Link>
