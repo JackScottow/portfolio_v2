@@ -39,6 +39,7 @@ const Contact = () => {
         <div className="px-6 py-8 lg:col-span-3 lg:py-auto lg:px-8 xl:pl-12">
           <div className="max-w-lg mx-auto lg:max-w-none">
             <form name="contact" action="/success" method="POST" className="grid grid-cols-1 gap-y-2" data-netlify="true">
+              <input type="hidden" name="form-name" value="contact" />
               <div>
                 <label htmlFor="name" className="sr-only">
                   Name
