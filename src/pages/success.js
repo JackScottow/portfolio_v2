@@ -9,7 +9,7 @@ const success = () => {
       <div className="m-auto text-center">
         <p className="py-5 text-4xl text-gray-300">
           Thanks for your message!
-          <FontAwesomeIcon icon={faFaceSmile} className="pl-2 text-teal-300" />
+          <FontAwesomeIcon icon={faFaceSmile} className="pl-2 text-teal-300" bounce />
         </p>
 
         <Link href="/#contact" className="text-gray-300 hover:text-current">
