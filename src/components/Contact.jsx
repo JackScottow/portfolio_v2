@@ -48,9 +48,9 @@ const Contact = () => {
               </div>
               <div>
                 <label htmlFor="email" className="sr-only">
-                  Email or phone number
+                  Email
                 </label>
-                <input id="email" name="email" type="email" autoComplete="email" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-teal-500 rounded shadow-sm focus:border-2 focus:border-teal-500 focus-ring-teal-500" placeholder="Email or phone number" />
+                <input id="email" name="email" type="email" autoComplete="email" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-teal-500 rounded shadow-sm focus:border-2 focus:border-teal-500 focus-ring-teal-500" placeholder="Email" />
               </div>
               <div>
                 <label htmlFor="message" className="sr-only">
