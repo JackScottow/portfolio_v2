@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import "@/styles/globals.css";
+import { NextUIProvider } from "@nextui-org/react";
 // import { Nunito } from "@next/font/google";
 
 // // If loading a variable font, you don't need to specify the font weight
@@ -12,8 +13,9 @@ export default function App({ Component, pageProps }) {
       <Head>
         <title>Jack Scottow Web Dev</title>
       </Head>
-
-      <Component {...pageProps} />
+      <NextUIProvider>
+        <Component {...pageProps} />
+      </NextUIProvider>
     </>
   );
 }
