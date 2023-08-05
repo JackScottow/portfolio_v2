@@ -4,7 +4,7 @@ const Landing = () => {
     <div className="container flex items-center justify-center h-screen text-gray-300 px-14 sm:px-28" id="home">
       <header>
         <h1 className="py-2 text-xl">
-          <Typewriter words={["Hi, my name is"]} typeSpeed={55} />
+          <Typewriter words={["Hi, my name is"]} typeSpeed={50} />
         </h1>
         <h2 className="py-2 text-6xl font-medium text-teal-300">
           <Typewriter words={["", "Jack Scottow"]} typeSpeed={80} delaySpeed={1500} />
