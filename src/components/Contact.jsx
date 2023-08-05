@@ -2,7 +2,7 @@ import { faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
-import { Tooltip, Zoom } from "@mui/material";
+import { Tooltip } from "@nextui-org/react";
 
 const Contact = () => {
   return (
@@ -13,22 +13,22 @@ const Contact = () => {
             <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch!</h2>
             <p className="max-w-3xl mt-5 text-lg text-gray-300">Contact me on my socials or leave a message!</p>
             <div className="flex justify-between pt-8">
-              <Tooltip title="j.scottow@gmail.com" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
+              <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Email</p>} delay={0} closeDelay={0}>
                 <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email">
                   <FontAwesomeIcon icon={faEnvelopeOpen} size="3x" />
                 </Link>
               </Tooltip>
-              <Tooltip title="Twitter" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
+              <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Twitter</p>} delay={0} closeDelay={0}>
                 <Link href="https://twitter.com/jms__1991" target="_blank" alt="twitter">
                   <FontAwesomeIcon icon={faTwitter} size="3x" />
                 </Link>
               </Tooltip>
-              <Tooltip title="Instagram" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
+              <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Instagram</p>} delay={0} closeDelay={0}>
                 <Link href="https://www.instagram.com/jackms91" target="_blank" alt="instagram">
                   <FontAwesomeIcon icon={faInstagram} size="3x" />
                 </Link>
               </Tooltip>
-              <Tooltip title="LinkedIn" placement="top" disableInteractive TransitionComponent={Zoom} arrow enterTouchDelay={0} className="transition ease-in-out lg:hover:scale-125">
+              <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">LinkedIn</p>} delay={0} closeDelay={0}>
                 <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin">
                   <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </Link>
@@ -44,22 +44,22 @@ const Contact = () => {
                 <label htmlFor="name" className="sr-only">
                   Name
                 </label>
-                <input type="text" name="name" id="name" autoComplete="name" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-teal-500 rounded shadow-sm focus:border-teal-500 focus:border-2 focus-ring-teal-500" placeholder="Name" />
+                <input type="text" name="name" id="name" autoComplete="name" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-2 border-teal-300 rounded shadow-sm " placeholder="Name" />
               </div>
               <div>
                 <label htmlFor="email" className="sr-only">
                   Email
                 </label>
-                <input id="email" name="email" type="email" autoComplete="email" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-teal-500 rounded shadow-sm focus:border-2 focus:border-teal-500 focus-ring-teal-500" placeholder="Email" />
+                <input id="email" name="email" type="email" autoComplete="email" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-2 border-teal-300 rounded shadow-sm " placeholder="Email" />
               </div>
               <div>
                 <label htmlFor="message" className="sr-only">
                   Message
                 </label>
-                <textarea id="message" name="message" rows={4} className="box-border block w-full px-4 py-3 placeholder-gray-400 border-teal-500 rounded shadow-sm focus:border-teal-500 focus-ring-teal-500 focus:border-2" placeholder="Message" defaultValue={""} />
+                <textarea id="message" name="message" rows={4} className="box-border block w-full px-4 py-3 placeholder-gray-400 border-2 border-teal-300 rounded shadow-sm resize-none" placeholder="Message" />
               </div>
               <div className="flex">
-                <button type="submit" className="inline-flex justify-center px-6 py-3 mx-auto font-medium bg-teal-300 border border-transparent rounded shadow-sm text-slate-900 hover:scale-105 focus:outline-none">
+                <button type="submit" className="inline-flex justify-center px-6 py-3 mx-auto font-medium bg-teal-300 border border-transparent rounded shadow-sm text-slate-900 hover:scale-105 focus:outline-none active:scale-100">
                   Submit
                 </button>
               </div>
