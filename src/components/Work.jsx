@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { motion } from "framer-motion";
+import { motion, useInView, useAnimate } from "framer-motion";
 import Link from "next/link";
 
 const projects = [
@@ -80,10 +80,10 @@ const Work = () => {
           <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
             <h2 className="py-4 text-3xl font-medium tracking-tight sm:text-4xl">My Work</h2>
           </div>
-          <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-12 sm:space-y-0 lg:grid-cols-3 lg:gap-x-8">
+          <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:grid-cols-2 lg:gap-x-10">
             {projects.map((project) => (
-              <motion.div initial={{ scale: 0, opacity: 0 }} whileInView={{ scale: 1, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeIn", duration: 0.3 }} key={project.name}>
-                <li className="min-h-full transition-transform duration-300 ease-in-out border border-gray-700 rounded-md lg:hover:scale-110 bg-slate-800">
+              <motion.div initial={{ opacity: 0, x: -250 }} whileInView={{ opacity: 1, x: 0 }} key={project.name} transition={{ duration: 0.25 }} viewport={{ once: true }}>
+                <li className="min-h-full transition-transform duration-300 ease-in-out border border-gray-700 rounded-md lg:hover:scale-105 bg-slate-800">
                   <div className="space-y-4">
                     <div className="aspect-w-3 aspect-h-2">
                       <img className="object-cover border-b border-gray-700 rounded-t-md" src={project.imageUrl} alt={project.name} />
