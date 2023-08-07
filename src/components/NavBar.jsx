@@ -36,7 +36,11 @@ const Sidebar = () => {
           </Link>
 
           <Link href="#contact" alt="contact">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Contact</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Contact</li>
+          </Link>
+
+          <Link href="../jackscottow_cv.pdf" alt="CV" target="_blank">
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">CV</li>
           </Link>
 
           {/* Add more links as needed */}
@@ -81,7 +85,11 @@ const Sidebar = () => {
           </Link>
 
           <Link href="#contact" onClick={closeMobileDrawer} alt="contact">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Contact</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Contact</li>
+          </Link>
+
+          <Link href="../jackscottow_cv.pdf" target="_blank" alt="CV" onClick={closeMobileDrawer}>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">CV</li>
           </Link>
 
           {/* Add more links as needed */}
