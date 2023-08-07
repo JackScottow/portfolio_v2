@@ -36,7 +36,7 @@ const projects = [
     imageUrl: "../project_images/portfolio.png",
     description: "This portfolio",
     githubUrl: "https://github.com/JackScottow/portfolio_v2",
-    liveUrl: "https://portfoliov2.jackscottow.com/",
+    liveUrl: "https://jackscottow.com/",
   },
   {
     name: "DVDShop",
