@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faAddressCard, faBars, faHouseChimney, faQuestion, faScrewdriverWrench, faScroll, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faBars, faHouseChimney, faLaptopCode, faQuestion, faScroll, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
@@ -39,7 +39,7 @@ const Sidebar = () => {
 
           <Link href="#work" alt="work">
             <li className="grid grid-cols-2 py-5 text-xl font-medium transition-all duration-300 ease-in-out border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
-              <FontAwesomeIcon icon={faScrewdriverWrench} size={"1x"} className="m-auto" /> Work
+              <FontAwesomeIcon icon={faLaptopCode} size={"1x"} className="m-auto" /> Work
             </li>
           </Link>
 
@@ -104,7 +104,7 @@ const Sidebar = () => {
 
           <Link href="#work" onClick={closeMobileDrawer} alt="work">
             <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900">
-              <FontAwesomeIcon icon={faScrewdriverWrench} size={"1x"} /> Work
+              <FontAwesomeIcon icon={faLaptopCode} size={"1x"} /> Work
             </li>
           </Link>
 
