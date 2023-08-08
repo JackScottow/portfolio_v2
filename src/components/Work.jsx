@@ -82,7 +82,7 @@ const Work = () => {
           </div>
           <ul role="list" className="grid gap-10 sm:grid-cols-2">
             {projects.map((project) => (
-              <motion.div initial={{ opacity: 0, x: -250 }} whileInView={{ opacity: 1, x: 0 }} key={project.name} transition={{ duration: 0.25 }} viewport={{ once: true }}>
+              <motion.div initial={{ x: -250 }} whileInView={{ x: 0 }} key={project.name} transition={{ duration: 0.25 }} viewport={{ once: true }}>
                 <li className="min-h-full transition-transform duration-300 ease-in-out border border-gray-700 rounded-md lg:hover:scale-105 bg-slate-800">
                   <div className="space-y-4">
                     <div className="aspect-w-3 aspect-h-2">
