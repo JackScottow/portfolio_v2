@@ -1,4 +1,4 @@
-import { faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faTwitter, faInstagram, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -16,6 +16,11 @@ const Contact = () => {
               <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Email</p>} delay={0} closeDelay={0}>
                 <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email">
                   <FontAwesomeIcon icon={faEnvelopeOpen} size="3x" />
+                </Link>
+              </Tooltip>
+              <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">GitHub</p>} delay={0} closeDelay={0}>
+                <Link href="https://www.github.com/jackscottow/" target="_blank" alt="github">
+                  <FontAwesomeIcon icon={faGithub} size="3x" />
                 </Link>
               </Tooltip>
               <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Twitter</p>} delay={0} closeDelay={0}>

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
+import { faAddressCard, faBars, faHouseChimney, faQuestion, faScrewdriverWrench, faScroll, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faTwitter, faInstagram, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
@@ -24,23 +24,33 @@ const Sidebar = () => {
         {/* Add your sidebar navigation links here */}
         <ul className="hidden text-center md:block">
           <Link href="#home" alt="home">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in-out border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Home</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in-out border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              <FontAwesomeIcon icon={faHouseChimney} size={"1x"} /> Home
+            </li>
           </Link>
 
           <Link href="#about" alt="twitter">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">About</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              <FontAwesomeIcon icon={faQuestion} size={"1x"} /> About
+            </li>
           </Link>
 
           <Link href="#work" alt="work">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900">Work</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900">
+              <FontAwesomeIcon icon={faScrewdriverWrench} size={"1x"} /> Work
+            </li>
           </Link>
 
           <Link href="#contact" alt="contact">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Contact</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              <FontAwesomeIcon icon={faAddressCard} size={"1x"} /> Contact
+            </li>
           </Link>
 
           <Link href="../jackscottow_cv.pdf" alt="CV" target="_blank">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">CV</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              <FontAwesomeIcon icon={faScroll} size={"1x"} /> CV
+            </li>
           </Link>
 
           {/* Add more links as needed */}
@@ -73,23 +83,35 @@ const Sidebar = () => {
       <div className={`${isMobileDrawerOpen ? "translate-y-0 top-0" : " -translate-y-full -top-full"} fixed  right-0 bg-slate-900 text-gray-100 h-fit w-full transition-transform duration-250 ease-in-out border-b border-teal-300 z-40`}>
         <ul className="pt-16 text-center ">
           <Link href="#home" onClick={closeMobileDrawer} alt="home">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Home</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              <FontAwesomeIcon icon={faHouseChimney} size={"1x"} /> Home
+            </li>
           </Link>
 
           <Link href="#about" onClick={closeMobileDrawer} alt="about">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">About</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              {" "}
+              <FontAwesomeIcon icon={faQuestion} size={"1x"} /> About
+            </li>
           </Link>
 
           <Link href="#work" onClick={closeMobileDrawer} alt="work">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900">Work</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900">
+              {" "}
+              <FontAwesomeIcon icon={faScrewdriverWrench} size={"1x"} /> Work
+            </li>
           </Link>
 
           <Link href="#contact" onClick={closeMobileDrawer} alt="contact">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">Contact</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              <FontAwesomeIcon icon={faAddressCard} size={"1x"} /> Contact
+            </li>
           </Link>
 
           <Link href="../jackscottow_cv.pdf" target="_blank" alt="CV" onClick={closeMobileDrawer}>
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">CV</li>
+            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
+              <FontAwesomeIcon icon={faScroll} size={"1x"} /> CV
+            </li>
           </Link>
 
           {/* Add more links as needed */}
