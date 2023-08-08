@@ -75,12 +75,12 @@ const projects = [
 const Work = () => {
   return (
     <div className="min-h-screen" id="work">
-      <div className="px-6 mx-auto my-auto max-w-7xl lg:px-8">
+      <div className="px-6 mx-auto my-auto max-w-7xl lg:px-2">
         <div className="">
           <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
             <h2 className="py-4 text-3xl font-medium tracking-tight sm:text-4xl">My Work</h2>
           </div>
-          <ul role="list" className="space-y-4 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:gap-y-10 sm:space-y-0 lg:grid-cols-2 lg:gap-x-10">
+          <ul role="list" className="grid gap-10 sm:grid-cols-2">
             {projects.map((project) => (
               <motion.div initial={{ opacity: 0, x: -250 }} whileInView={{ opacity: 1, x: 0 }} key={project.name} transition={{ duration: 0.25 }} viewport={{ once: true }}>
                 <li className="min-h-full transition-transform duration-300 ease-in-out border border-gray-700 rounded-md lg:hover:scale-105 bg-slate-800">
@@ -90,7 +90,7 @@ const Work = () => {
                     </div>
                     <div className="space-y-2">
                       <div className="px-3 space-y-1 font-medium leading-6 text-center">
-                        <h3 className="text-2xl">{project.name}</h3>
+                        <h3 className="text-xl md:text-2xl">{project.name}</h3>
                         <p className="text-sm text-gray-300 ">{project.tech}</p>
                         <p className="text-gray-300">{project.description}</p>
                       </div>
