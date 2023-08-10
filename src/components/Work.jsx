@@ -21,6 +21,14 @@ const projects = [
     githubUrl: "https://github.com/JackScottow/uberserve-nextjs-landing-page",
     liveUrl: "https://uberserve.jackscottow.com",
   },
+  {
+    name: "QR Code Generator",
+    tech: "NextJS / Typescript / TailwindCSS",
+    imageUrl: "../project_images/qr-code-generator.png",
+    description: "A simple QR code generator",
+    githubUrl: "https://github.com/JackScottow/qr-code-generator",
+    liveUrl: "https://qr.jackscottow.com",
+  },
 
   {
     name: "Rock Paper Scissors",
