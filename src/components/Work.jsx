@@ -75,14 +75,16 @@ const projects = [
 const Work = () => {
   return (
     <div className="min-h-screen" id="work">
-      <div className="px-6 mx-auto my-auto max-w-7xl lg:px-2">
+      <div className="px-10 mx-auto my-auto max-w-7xl lg:px-2">
         <div className="">
           <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-            <h2 className="py-4 text-3xl font-medium tracking-tight sm:text-4xl">My Work</h2>
+            <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }}>
+              <h2 className="py-4 text-3xl font-medium tracking-tight text-center md:text-left sm:text-4xl">My Work</h2>
+            </motion.div>
           </div>
           <ul role="list" className="grid gap-10 sm:grid-cols-2">
             {projects.map((project) => (
-              <motion.div initial={{ x: -250 }} whileInView={{ x: 0 }} key={project.name} transition={{ duration: 0.25 }} viewport={{ once: true }}>
+              <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} key={project.name} transition={{ duration: 0.25 }} viewport={{ once: true }}>
                 <li className="min-h-full transition-transform duration-300 ease-in-out border border-gray-700 rounded-md lg:hover:scale-105 bg-slate-800">
                   <div className="space-y-4">
                     <div className="aspect-w-3 aspect-h-2">

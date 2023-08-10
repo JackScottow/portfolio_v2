@@ -3,11 +3,12 @@ import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Tooltip } from "@nextui-org/react";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
     <div className="flex min-h-screen" id="contact">
-      <div className="relative mx-auto my-auto lg:grid lg:grid-cols-5">
+      <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }} className="relative mx-auto my-auto lg:grid lg:grid-cols-5">
         <div className="px-10 py-8 lg:col-span-2 lg:px-auto lg:py-auto ">
           <div className="max-w-lg mx-auto">
             <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch!</h2>
@@ -71,7 +72,7 @@ const Contact = () => {
             </form>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
