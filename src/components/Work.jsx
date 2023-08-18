@@ -29,6 +29,14 @@ const projects = [
     githubUrl: "https://github.com/JackScottow/qr-code-generator",
     liveUrl: "https://qr.jackscottow.com",
   },
+  {
+    name: "NextTube",
+    tech: "NextJS / Typescript / TailwindCSS",
+    imageUrl: "../project_images/nexttube.png",
+    description: "A YouTube clone (Work in progress)",
+    githubUrl: "https://github.com/JackScottow/nexttube",
+    liveUrl: "https://nexttube.jackscottow.com",
+  },
 
   {
     name: "Rock Paper Scissors",
