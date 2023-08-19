@@ -6,12 +6,12 @@ import Link from "next/link";
 
 const projects = [
   {
-    name: "Wordle Clone",
-    tech: "React / TailwindCSS",
-    imageUrl: "../project_images/wordle.png",
-    description: "A wordle clone",
-    githubUrl: "https://github.com/JackScottow/Wordle",
-    liveUrl: "https://wordle.jackscottow.com",
+    name: "NextTube",
+    tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
+    imageUrl: "../project_images/nexttube.png",
+    description: "A YouTube clone (Work in progress)",
+    githubUrl: "https://github.com/JackScottow/nexttube",
+    liveUrl: "https://nexttube.jackscottow.com",
   },
   {
     name: "UberServe",
@@ -22,6 +22,14 @@ const projects = [
     liveUrl: "https://uberserve.jackscottow.com",
   },
   {
+    name: "Wordle Clone",
+    tech: "React / TailwindCSS",
+    imageUrl: "../project_images/wordle.png",
+    description: "A wordle clone",
+    githubUrl: "https://github.com/JackScottow/Wordle",
+    liveUrl: "https://wordle.jackscottow.com",
+  },
+  {
     name: "QR Code Generator",
     tech: "NextJS / Typescript / TailwindCSS",
     imageUrl: "../project_images/qr-code-generator.png",
@@ -30,14 +38,13 @@ const projects = [
     liveUrl: "https://qr.jackscottow.com",
   },
   {
-    name: "NextTube",
-    tech: "NextJS / Typescript / TailwindCSS",
-    imageUrl: "../project_images/nexttube.png",
-    description: "A YouTube clone (Work in progress)",
-    githubUrl: "https://github.com/JackScottow/nexttube",
-    liveUrl: "https://nexttube.jackscottow.com",
+    name: "Portfolio",
+    tech: "NextJS / TailwindCSS",
+    imageUrl: "../project_images/portfolio.png",
+    description: "This portfolio",
+    githubUrl: "https://github.com/JackScottow/portfolio_v2",
+    liveUrl: "https://jackscottow.com/",
   },
-
   {
     name: "Rock Paper Scissors",
     tech: "React",
@@ -45,14 +52,6 @@ const projects = [
     description: "A simple rock paper scissors game",
     githubUrl: "https://github.com/JackScottow/rock-paper-scissors",
     liveUrl: "https://rockpaperscissors.jackscottow.com/",
-  },
-  {
-    name: "Portfolio",
-    tech: "NextJS / TailwindCSS",
-    imageUrl: "../project_images/portfolio.png",
-    description: "This portfolio",
-    githubUrl: "https://github.com/JackScottow/portfolio_v2",
-    liveUrl: "https://jackscottow.com/",
   },
   {
     name: "DVDShop",
