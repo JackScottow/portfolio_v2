@@ -10,7 +10,7 @@ const projects = [
     name: "NextTube",
     tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
     imageUrl: "../project_images/nexttube.png",
-    description: "A YouTube clone (Work in progress)",
+    description: "A full-stack YouTube clone featuring video uploads, comments, and user authentication",
     githubUrl: "https://github.com/JackScottow/nexttube",
     liveUrl: "https://nexttube.jackscottow.com",
   },
@@ -18,7 +18,7 @@ const projects = [
     name: "UberServe",
     tech: "NextJS / TailwindCSS",
     imageUrl: "../project_images/uberserve.png",
-    description: "A broadband provider landing page",
+    description: "Modern ISP landing page with responsive design and interactive pricing calculator",
     githubUrl: "https://github.com/JackScottow/uberserve-nextjs-landing-page",
     liveUrl: "https://uberserve.jackscottow.com",
   },
@@ -26,7 +26,7 @@ const projects = [
     name: "Wordle Clone",
     tech: "React / TailwindCSS",
     imageUrl: "../project_images/wordle.png",
-    description: "A wordle clone",
+    description: "Interactive word puzzle game with daily challenges and score tracking",
     githubUrl: "https://github.com/JackScottow/Wordle",
     liveUrl: "https://wordle.jackscottow.com",
   },
@@ -34,7 +34,7 @@ const projects = [
     name: "QR Code Generator",
     tech: "NextJS / Typescript / TailwindCSS",
     imageUrl: "../project_images/qr-code-generator.png",
-    description: "A simple QR code generator",
+    description: "Generate and customize QR codes with instant preview and download options",
     githubUrl: "https://github.com/JackScottow/qr-code-generator",
     liveUrl: "https://qr.jackscottow.com",
   },
@@ -42,7 +42,7 @@ const projects = [
     name: "Portfolio",
     tech: "NextJS / TailwindCSS",
     imageUrl: "../project_images/portfolio.png",
-    description: "This portfolio",
+    description: "Personal portfolio showcasing projects with responsive design and dark mode support",
     githubUrl: "https://github.com/JackScottow/portfolio_v2",
     liveUrl: "https://jackscottow.com/",
   },
@@ -50,7 +50,7 @@ const projects = [
     name: "Rock Paper Scissors",
     tech: "React",
     imageUrl: "../project_images/rockpaperscissors.png",
-    description: "A simple rock paper scissors game",
+    description: "Classic game with animated interactions and score tracking system",
     githubUrl: "https://github.com/JackScottow/rock-paper-scissors",
     liveUrl: "https://rockpaperscissors.jackscottow.com/",
   },
@@ -58,7 +58,7 @@ const projects = [
     name: "DVDShop",
     tech: "React / Bootstrap / TMDB API",
     imageUrl: "../project_images/dvdshop.png",
-    description: "An e-commerce front end",
+    description: "Movie e-commerce platform with TMDB integration and shopping cart functionality",
     githubUrl: "https://github.com/JackScottow/dvd-shop-ecommerce",
     liveUrl: "https://dvdshop.jackscottow.com/",
   },
@@ -66,7 +66,7 @@ const projects = [
     name: "Tic Tac Toe",
     tech: "HTML / JS / CSS",
     imageUrl: "../project_images/tictactoe.png",
-    description: "A simple tic tac toe game",
+    description: "Interactive two-player game with win detection and score tracking",
     githubUrl: "https://github.com/JackScottow/Tic-Tac-Toe",
     liveUrl: "https://tictactoe.jackscottow.com/",
   },
@@ -74,7 +74,7 @@ const projects = [
     name: "Dynamic Landing Page",
     tech: "HTML / JS / CSS",
     imageUrl: "../project_images/dynamiclandingpage.png",
-    description: "A dynamic landing page",
+    description: "Personalized dashboard with time-based greetings and dynamic background themes",
     githubUrl: "https://github.com/JackScottow/Dynamic-Landing-Page",
     liveUrl: "https://dynamic-landing-page.jackscottow.com/",
   },
@@ -82,7 +82,7 @@ const projects = [
     name: "Pro Tips",
     tech: "HTML / JS / CSS / AdviceSlip API",
     imageUrl: "../project_images/pro-tips.png",
-    description: "A simple random quote generator",
+    description: "Random advice generator with smooth animations and API integration",
     githubUrl: "https://github.com/JackScottow/Random-Quote-Generator",
     liveUrl: "https://pro-tips.jackscottow.com/",
   },
@@ -91,48 +91,38 @@ const projects = [
 const Work = () => {
   return (
     <div className="min-h-screen" id="work">
-      <div className="px-10 mx-auto my-auto max-w-7xl lg:px-2">
-        <div className="">
-          <div className="space-y-5 sm:space-y-4 md:max-w-xl lg:max-w-3xl xl:max-w-none">
-            <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }}>
-              <h2 className="py-4 text-3xl font-medium tracking-tight text-center md:text-left sm:text-4xl">My Work</h2>
-            </motion.div>
-          </div>
-          <ul role="list" className="grid gap-10 sm:grid-cols-2">
-            {projects.map((project) => (
-              <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} key={project.name} transition={{ duration: 0.25 }} viewport={{ once: true }}>
-                <li className="min-h-full transition-transform duration-300 ease-in-out border border-gray-700 rounded-md lg:hover:scale-105 bg-slate-800">
-                  <div className="space-y-4">
-                    <div className="aspect-w-3 aspect-h-2">
-                      <img className="object-cover border-b border-gray-700 rounded-t-md" src={project.imageUrl} alt={project.name} />
-                    </div>
-                    <div className="space-y-2">
-                      <div className="px-3 space-y-1 font-medium leading-6 text-center">
-                        <h3 className="text-xl md:text-2xl">{project.name}</h3>
-                        <p className="text-sm text-gray-300 ">{project.tech}</p>
-                        <p className="text-gray-300">{project.description}</p>
-                      </div>
-                      <ul role="list" className="flex justify-center p-4 ">
-                        <li>
-                          <Link href={project.githubUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300" alt="github">
-                            <span className="sr-only">GitHub</span>
-                            <FontAwesomeIcon icon={faGithub} size="2xl" />
-                          </Link>
-                        </li>
-                        <li>
-                          <Link href={project.liveUrl} target="_blank" className="px-4 text-gray-300 hover:text-teal-300" alt="live">
-                            <span className="sr-only">LinkedIn</span>
-                            <FontAwesomeIcon icon={faUpRightFromSquare} size="2xl" />
-                          </Link>
-                        </li>
-                      </ul>
+      <div className="px-6 py-12 mx-auto max-w-7xl lg:px-8">
+        <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }} className="mb-12">
+          <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">My Work</h2>
+        </motion.div>
+
+        <ul role="list" className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {projects.map((project) => (
+            <motion.div initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} key={project.name} transition={{ duration: 0.4 }} viewport={{ once: true }}>
+              <li className="group h-full overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl hover:scale-105">
+                <div className="flex flex-col h-full">
+                  <div className="relative aspect-[16/9] overflow-hidden">
+                    <img className="object-cover w-full transition-transform duration-500 group-hover:scale-110" src={project.imageUrl} alt={project.name} />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                  </div>
+                  <div className="flex flex-col flex-grow p-6 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
+                    <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">{project.name}</h3>
+                    <p className="mb-3 text-sm font-medium text-teal-600 dark:text-teal-400">{project.tech}</p>
+                    <p className="mb-4 text-gray-600 dark:text-gray-300 line-clamp-3">{project.description}</p>
+                    <div className="flex space-x-4 mt-auto">
+                      <Link href={project.githubUrl} target="_blank" className="text-gray-600 transition-all hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400 hover:scale-110" aria-label="View GitHub repository">
+                        <FontAwesomeIcon icon={faGithub} size="lg" />
+                      </Link>
+                      <Link href={project.liveUrl} target="_blank" className="text-gray-600 transition-all hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400 hover:scale-110" aria-label="View live site">
+                        <FontAwesomeIcon icon={faUpRightFromSquare} size="lg" />
+                      </Link>
                     </div>
                   </div>
-                </li>
-              </motion.div>
-            ))}
-          </ul>
-        </div>
+                </div>
+              </li>
+            </motion.div>
+          ))}
+        </ul>
       </div>
     </div>
   );
