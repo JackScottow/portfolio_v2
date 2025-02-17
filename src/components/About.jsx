@@ -14,7 +14,7 @@ const About = () => {
         </h2>
 
         <div className="space-y-6 text-gray-300">
-          <p className="text-lg leading-relaxed">Hi there! I&apos;m Jack, a front-end developer based near London specialising in React. I have expertise in a wide range of web technologies and I&apos;m passionate about creating amazing user experiences. Feel free to check out some of my work!</p>
+          <p className="text-lg leading-relaxed">Hi there! I&apos;m Jack, a full-stack developer based near London. I specialize in React for front-end development and have expertise in NodeJS and other back-end technologies. I&apos;m passionate about creating seamless user experiences and robust server-side solutions. Feel free to check out some of my work!</p>
 
           <h3 className="mt-12 mb-6 text-2xl font-semibold">Technologies I work with</h3>
 
