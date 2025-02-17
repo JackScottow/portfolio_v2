@@ -3,6 +3,7 @@ import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { motion, useInView, useAnimate } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 
 const projects = [
   {

@@ -7,25 +7,18 @@ const skills = ["HTML/CSS/JS", "React/NextJS", "TypeScript", "SASS/SCSS", "NodeJ
 
 const About = () => {
   return (
-    <div className="flex min-h-screen" id="about">
-      <div className="px-10 mx-auto my-auto max-w-7xl lg:py-auto lg:px-auto">
-        <div className="lg:grid lg:grid-cols-2 lg:items-center lg:gap-8">
-          <div>
-            <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }}>
-              <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">About Me</h2>
-            </motion.div>
-            <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }}>
-              <p className="max-w-3xl mt-3 text-lg text-gray-300">Hi there! I&apos;m Jack, a front-end developer based near London specialising in React. I have expertise in a wide range of web technologies and I&apos;m passionate about creating amazing user experiences. Feel free to check out some of my work! </p>
-            </motion.div>
-            <ul className="grid grid-cols-2 mt-5 text-left list-disc list-inside gap-x-12 gap-y-1">
-              {skills.map((skill, i) => (
-                <motion.li initial={{ x: -150 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }} key={i}>
-                  {skill}
-                </motion.li>
-              ))}
-            </ul>
-          </div>
-          <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }} className=" grid grid-cols-3 gap-0.5 lg:mt-0 py-5 lg:grid-cols-2">
+    <section id="about" className="min-h-screen px-6 py-20 sm:px-28">
+      <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
+        <h2 className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
+          <span className="text-teal-300">About</span> Me
+        </h2>
+
+        <div className="space-y-6 text-gray-300">
+          <p className="text-lg leading-relaxed">Hi there! I&apos;m Jack, a front-end developer based near London specialising in React. I have expertise in a wide range of web technologies and I&apos;m passionate about creating amazing user experiences. Feel free to check out some of my work!</p>
+
+          <h3 className="mt-12 mb-6 text-2xl font-semibold">Technologies I work with</h3>
+
+          <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }} className="grid grid-cols-3 gap-6 lg:grid-cols-6">
             <div className="flex justify-center col-span-1 px-8 py-8 ">
               <Tooltip content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">React</p>} delay={0} closeDelay={0}>
                 <FontAwesomeIcon icon={faReact} size="4x" className="cursor-help" />
@@ -58,8 +51,8 @@ const About = () => {
             </div>
           </motion.div>
         </div>
-      </div>
-    </div>
+      </motion.div>
+    </section>
   );
 };
 
