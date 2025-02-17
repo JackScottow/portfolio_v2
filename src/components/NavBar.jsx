@@ -57,30 +57,20 @@ const Sidebar = () => {
 
           {/* Add more links as needed */}
         </ul>
-        <div className="flex flex-col py-10 mx-auto align-bottom">
+        <div className="flex flex-col items-center py-10">
           <Tooltip content={<p className="text-sm rounded-md bg-slate-900">GitHub</p>} delay={0} closeDelay={0} placement="right" containerPadding={0} offset={0}>
-            <Link href="https://github.com/JackScottow" target="_blank" alt="github">
-              <FontAwesomeIcon icon={faGithub} size="2xl" className="py-2 transition duration-200 hover:text-teal-300 hover:scale-125" />
-            </Link>
-          </Tooltip>
-          <Tooltip content={<p className="text-sm rounded-md bg-slate-900">Twitter</p>} delay={0} closeDelay={0} placement="right" containerPadding={0} offset={0}>
-            <Link href="https://twitter.com/jms__1991" target="_blank" alt="twitter">
-              <FontAwesomeIcon icon={faTwitter} size="2xl" className="py-2 transition duration-200 hover:text-teal-300 hover:scale-125" />
-            </Link>
-          </Tooltip>
-          <Tooltip content={<p className="text-sm rounded-md bg-slate-900">Instagram</p>} delay={0} closeDelay={0} placement="right" containerPadding={0} offset={0}>
-            <Link href="https://www.instagram.com/jackms91" target="_blank" alt="instagram" className="py-2 transition duration-200 hover:text-teal-300 hover:scale-125">
-              <FontAwesomeIcon icon={faInstagram} size="2xl" />
+            <Link href="https://github.com/JackScottow" target="_blank" alt="github" className="py-2 w-fit transition duration-200 hover:text-teal-300 hover:scale-110">
+              <FontAwesomeIcon icon={faGithub} size="2xl" />
             </Link>
           </Tooltip>
           <Tooltip content={<p className="text-sm rounded-md bg-slate-900">LinkedIn</p>} delay={0} closeDelay={0} placement="right" containerPadding={0} offset={0}>
-            <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin">
-              <FontAwesomeIcon icon={faLinkedin} size="2xl" className="py-2 transition duration-200 hover:text-teal-300 hover:scale-125" />
+            <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin" className="py-2 w-fit transition duration-200 hover:text-teal-300 hover:scale-110">
+              <FontAwesomeIcon icon={faLinkedin} size="2xl" />
             </Link>
           </Tooltip>
           <Tooltip content={<p className="text-sm rounded-md bg-slate-900">Email</p>} delay={0} closeDelay={0} placement="right" containerPadding={0} offset={0}>
-            <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email">
-              <FontAwesomeIcon icon={faEnvelopeOpen} size="2xl" className="py-2 transition duration-200 hover:text-teal-300 hover:scale-125" />
+            <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email" className="py-2 w-fit transition duration-200 hover:text-teal-300 hover:scale-110">
+              <FontAwesomeIcon icon={faEnvelopeOpen} size="2xl" />
             </Link>
           </Tooltip>
         </div>
@@ -122,25 +112,15 @@ const Sidebar = () => {
 
           {/* Add more links as needed */}
         </ul>
-        <div className="flex px-2 py-6 justify-evenly">
-          <Link href="https://github.com/JackScottow" target="_blank" alt="github">
-            <FontAwesomeIcon icon={faGithub} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
+        <div className="flex gap-6 px-8 py-6 justify-evenly">
+          <Link href="https://github.com/JackScottow" target="_blank" alt="github" className="w-fit transition duration-300 ease-in hover:text-teal-300 hover:scale-110">
+            <FontAwesomeIcon icon={faGithub} size="xl" />
           </Link>
-
-          <Link href="https://twitter.com/jms__1991" target="_blank" alt="twitter">
-            <FontAwesomeIcon icon={faTwitter} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
+          <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin" className="w-fit transition duration-300 ease-in hover:text-teal-300 hover:scale-110">
+            <FontAwesomeIcon icon={faLinkedin} size="xl" />
           </Link>
-
-          <Link href="https://www.instagram.com/jackms91" target="_blank" alt="instagram">
-            <FontAwesomeIcon icon={faInstagram} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
-          </Link>
-
-          <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin">
-            <FontAwesomeIcon icon={faLinkedin} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
-          </Link>
-
-          <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email">
-            <FontAwesomeIcon icon={faEnvelopeOpen} size="xl" className="transition duration-300 ease-in hover:text-gray-500 hover:scale-125" />
+          <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email" className="w-fit transition duration-300 ease-in hover:text-teal-300 hover:scale-110">
+            <FontAwesomeIcon icon={faEnvelopeOpen} size="xl" />
           </Link>
         </div>
       </div>

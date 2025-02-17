@@ -1,4 +1,4 @@
-import { faTwitter, faInstagram, faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelopeOpen } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -13,29 +13,19 @@ const Contact = () => {
           <div className="max-w-lg mx-auto">
             <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch!</h2>
             <p className="max-w-3xl mt-5 text-lg text-gray-300">Contact me on my socials or leave a message!</p>
-            <div className="flex justify-between pt-8">
+            <div className="flex justify-center gap-8 pt-8">
               <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Email</p>} delay={0} closeDelay={0}>
-                <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email">
+                <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email" className="text-white transition duration-200 hover:text-teal-300 hover:scale-110">
                   <FontAwesomeIcon icon={faEnvelopeOpen} size="3x" />
                 </Link>
               </Tooltip>
               <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">GitHub</p>} delay={0} closeDelay={0}>
-                <Link href="https://www.github.com/jackscottow/" target="_blank" alt="github">
+                <Link href="https://www.github.com/jackscottow/" target="_blank" alt="github" className="text-white transition duration-200 hover:text-teal-300 hover:scale-110">
                   <FontAwesomeIcon icon={faGithub} size="3x" />
                 </Link>
               </Tooltip>
-              <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Twitter</p>} delay={0} closeDelay={0}>
-                <Link href="https://twitter.com/jms__1991" target="_blank" alt="twitter">
-                  <FontAwesomeIcon icon={faTwitter} size="3x" />
-                </Link>
-              </Tooltip>
-              <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">Instagram</p>} delay={0} closeDelay={0}>
-                <Link href="https://www.instagram.com/jackms91" target="_blank" alt="instagram">
-                  <FontAwesomeIcon icon={faInstagram} size="3x" />
-                </Link>
-              </Tooltip>
               <Tooltip placement={"bottom"} showArrow={true} content={<p className="px-2 py-1 text-gray-300 rounded-md text-md">LinkedIn</p>} delay={0} closeDelay={0}>
-                <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin">
+                <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin" className="text-white transition duration-200 hover:text-teal-300 hover:scale-110">
                   <FontAwesomeIcon icon={faLinkedin} size="3x" />
                 </Link>
               </Tooltip>

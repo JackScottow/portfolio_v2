@@ -5,7 +5,7 @@ import { motion, useInView, useAnimate } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
-const projects = [
+export const projects = [
   {
     name: "NextTube",
     tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
@@ -39,13 +39,14 @@ const projects = [
     liveUrl: "https://qr.jackscottow.com",
   },
   {
-    name: "Portfolio",
-    tech: "NextJS / TailwindCSS",
-    imageUrl: "../project_images/portfolio.png",
-    description: "Personal portfolio showcasing projects with responsive design and dark mode support",
-    githubUrl: "https://github.com/JackScottow/portfolio_v2",
-    liveUrl: "https://jackscottow.com/",
+    name: "Dynamic Landing Page",
+    tech: "HTML / JS / CSS",
+    imageUrl: "../project_images/dynamiclandingpage.png",
+    description: "Personalized dashboard with time-based greetings and dynamic background themes",
+    githubUrl: "https://github.com/JackScottow/Dynamic-Landing-Page",
+    liveUrl: "https://dynamic-landing-page.jackscottow.com/",
   },
+
   {
     name: "Rock Paper Scissors",
     tech: "React",
@@ -71,12 +72,12 @@ const projects = [
     liveUrl: "https://tictactoe.jackscottow.com/",
   },
   {
-    name: "Dynamic Landing Page",
-    tech: "HTML / JS / CSS",
-    imageUrl: "../project_images/dynamiclandingpage.png",
-    description: "Personalized dashboard with time-based greetings and dynamic background themes",
-    githubUrl: "https://github.com/JackScottow/Dynamic-Landing-Page",
-    liveUrl: "https://dynamic-landing-page.jackscottow.com/",
+    name: "Portfolio",
+    tech: "NextJS / TailwindCSS",
+    imageUrl: "../project_images/portfolio.png",
+    description: "Personal portfolio showcasing projects with responsive design and dark mode support",
+    githubUrl: "https://github.com/JackScottow/portfolio_v2",
+    liveUrl: "https://jackscottow.com/",
   },
   {
     name: "Pro Tips",
@@ -99,27 +100,31 @@ const Work = () => {
         <ul role="list" className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project) => (
             <motion.div initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} key={project.name} transition={{ duration: 0.4 }} viewport={{ once: true }}>
-              <li className="group h-full overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl hover:scale-105">
-                <div className="flex flex-col h-full">
-                  <div className="relative aspect-[16/9] overflow-hidden">
-                    <img className="object-cover w-full transition-transform duration-500 group-hover:scale-110" src={project.imageUrl} alt={project.name} />
-                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
-                  </div>
-                  <div className="flex flex-col flex-grow p-6 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
-                    <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">{project.name}</h3>
-                    <p className="mb-3 text-sm font-medium text-teal-600 dark:text-teal-400">{project.tech}</p>
-                    <p className="mb-4 text-gray-600 dark:text-gray-300 line-clamp-3">{project.description}</p>
-                    <div className="flex space-x-4 mt-auto">
-                      <Link href={project.githubUrl} target="_blank" className="text-gray-600 transition-all hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400 hover:scale-110" aria-label="View GitHub repository">
-                        <FontAwesomeIcon icon={faGithub} size="lg" />
-                      </Link>
-                      <Link href={project.liveUrl} target="_blank" className="text-gray-600 transition-all hover:text-teal-600 dark:text-gray-400 dark:hover:text-teal-400 hover:scale-110" aria-label="View live site">
-                        <FontAwesomeIcon icon={faUpRightFromSquare} size="lg" />
-                      </Link>
+              <Link href={`/projects/${project.name.toLowerCase().replace(/\s+/g, "-")}`}>
+                <li className="group h-full overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl hover:scale-105 cursor-pointer border border-gray-200 dark:border-gray-700">
+                  <div className="flex flex-col h-full">
+                    <div className="relative aspect-[16/9] overflow-hidden border-b border-gray-200 dark:border-gray-700">
+                      <img className="absolute h-full w-full object-cover transition-transform duration-500 group-hover:scale-110" src={project.imageUrl} alt={project.name} />
+                      <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                    </div>
+                    <div className="flex flex-col flex-grow p-6 transform transition-transform duration-300 group-hover:translate-y-[-4px]">
+                      <h3 className="mb-2 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">{project.name}</h3>
+                      <p className="mb-3 text-sm font-medium text-teal-600 dark:text-teal-400">{project.tech}</p>
+                      <p className="mb-4 text-gray-600 dark:text-gray-300 line-clamp-3">{project.description}</p>
+                      <div className="flex justify-center gap-4 mt-auto">
+                        <Link href={project.githubUrl} target="_blank" className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 text-sm w-36" onClick={(e) => e.stopPropagation()}>
+                          <FontAwesomeIcon icon={faGithub} />
+                          View Source
+                        </Link>
+                        <Link href={project.liveUrl} target="_blank" className="inline-flex items-center justify-center gap-2 px-4 py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors dark:bg-teal-500 dark:hover:bg-teal-600 text-sm w-36" onClick={(e) => e.stopPropagation()}>
+                          <FontAwesomeIcon icon={faUpRightFromSquare} />
+                          Live Demo
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </li>
+                </li>
+              </Link>
             </motion.div>
           ))}
         </ul>
