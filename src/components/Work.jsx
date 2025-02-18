@@ -10,7 +10,7 @@ export const projects = [
     name: "NextBook",
     tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
     imageUrl: "../project_images/nextbook.png",
-    description: "A full-stack social media app featuring video uploads, comments, and user authentication",
+    description: "A modern social media app with user authentication, real-time chat, media uploads and a responsive UI.",
     githubUrl: "https://github.com/JackScottow/nextjs-15-social-media-app",
     liveUrl: "https://nextbook.jackscottow.com",
   },
