@@ -7,13 +7,14 @@ import Image from "next/image";
 
 export const projects = [
   {
-    name: "NextTube",
+    name: "NextBook",
     tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
-    imageUrl: "../project_images/nexttube.png",
-    description: "A full-stack YouTube clone featuring video uploads, comments, and user authentication",
-    githubUrl: "https://github.com/JackScottow/nexttube",
-    liveUrl: "https://nexttube.jackscottow.com",
+    imageUrl: "../project_images/nextbook.png",
+    description: "A full-stack social media app featuring video uploads, comments, and user authentication",
+    githubUrl: "https://github.com/JackScottow/nextjs-15-social-media-app",
+    liveUrl: "https://nextbook.jackscottow.com",
   },
+
   {
     name: "UberServe",
     tech: "NextJS / TailwindCSS",
