@@ -76,7 +76,7 @@ export const projects = [
     name: "Portfolio",
     tech: "NextJS / TailwindCSS",
     imageUrl: "../project_images/portfolio.png",
-    description: "Personal portfolio showcasing projects with responsive design and dark mode support",
+    description: "Personal portfolio showcasing projects with responsive design",
     githubUrl: "https://github.com/JackScottow/portfolio_v2",
     liveUrl: "https://jackscottow.com/",
   },
