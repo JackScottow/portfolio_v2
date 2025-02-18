@@ -10,7 +10,7 @@ export const projects = [
     name: "NextBook",
     tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
     imageUrl: "../project_images/nextbook.png",
-    description: "A modern social media app with user authentication, real-time chat, media uploads and a responsive UI.",
+    description: "A modern social media app with user authentication, real-time chat, media uploads and a responsive UI",
     githubUrl: "https://github.com/JackScottow/nextjs-15-social-media-app",
     liveUrl: "https://nextbook.jackscottow.com",
   },
@@ -23,6 +23,16 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/uberserve-nextjs-landing-page",
     liveUrl: "https://uberserve.jackscottow.com",
   },
+
+  {
+    name: "CodeCache",
+    tech: "NextJS / TypeScript / Prisma / TailwindCSS / Supabase",
+    imageUrl: "../project_images/codecache.png",
+    description: "A minimalist code and text sharing platform à la pastebin",
+    githubUrl: "https://github.com/JackScottow/codecache",
+    liveUrl: "https://codecache.jackscottow.com",
+  },
+
   {
     name: "Wordle Clone",
     tech: "React / TailwindCSS",
