@@ -81,12 +81,12 @@ export const projects = [
     liveUrl: "https://jackscottow.com/",
   },
   {
-    name: "Pro Tips",
+    name: "Wisdom Oracle",
     tech: "HTML / JS / CSS / AdviceSlip API",
-    imageUrl: "../project_images/pro-tips.png",
+    imageUrl: "../project_images/wisdomoracle.png",
     description: "Random advice generator with smooth animations and API integration",
     githubUrl: "https://github.com/JackScottow/Random-Quote-Generator",
-    liveUrl: "https://pro-tips.jackscottow.com/",
+    liveUrl: "https://wisdomoracle.jackscottow.com/",
   },
 ];
 
