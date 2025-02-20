@@ -16,15 +16,6 @@ export const projects = [
   },
 
   {
-    name: "UberServe",
-    tech: "NextJS / TailwindCSS",
-    imageUrl: "../project_images/uberserve.png",
-    description: "Modern ISP landing page with responsive design and interactive pricing calculator",
-    githubUrl: "https://github.com/JackScottow/uberserve-nextjs-landing-page",
-    liveUrl: "https://uberserve.jackscottow.com",
-  },
-
-  {
     name: "CodeCache",
     tech: "NextJS / TypeScript / Prisma / TailwindCSS / Supabase",
     imageUrl: "../project_images/codecache.png",
@@ -32,7 +23,14 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/codecache",
     liveUrl: "https://codecache.jackscottow.com",
   },
-
+  {
+    name: "UberServe",
+    tech: "NextJS / TailwindCSS",
+    imageUrl: "../project_images/uberserve.png",
+    description: "Modern ISP landing page with responsive design and interactive pricing calculator",
+    githubUrl: "https://github.com/JackScottow/uberserve-nextjs-landing-page",
+    liveUrl: "https://uberserve.jackscottow.com",
+  },
   {
     name: "Wordle Clone",
     tech: "React / TailwindCSS",
@@ -109,8 +107,21 @@ const Work = () => {
         </motion.div>
 
         <ul role="list" className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
-          {projects.map((project) => (
-            <motion.div initial={{ y: 20, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} key={project.name} transition={{ duration: 0.4 }} viewport={{ once: true }}>
+          {projects.map((project, index) => (
+            <motion.div
+              initial={{ y: 50, opacity: 0 }}
+              whileInView={{ y: 0, opacity: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: index * 0.05,
+                ease: "easeOut",
+              }}
+              whileHover={{
+                scale: 1.02,
+                transition: { duration: 0.2 },
+              }}
+              viewport={{ once: true }}
+              key={project.name}>
               <Link href={`/projects/${project.name.toLowerCase().replace(/\s+/g, "-")}`}>
                 <li className="group h-full overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl hover:scale-105 cursor-pointer border border-gray-200 dark:border-gray-700">
                   <div className="flex flex-col h-full">

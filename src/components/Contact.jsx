@@ -8,7 +8,16 @@ import { motion } from "framer-motion";
 const Contact = () => {
   return (
     <div className="flex min-h-screen" id="contact">
-      <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }} className="relative mx-auto my-auto lg:grid lg:grid-cols-5">
+      <motion.div
+        initial={{ x: -100, opacity: 0 }}
+        whileInView={{ x: 0, opacity: 1 }}
+        transition={{
+          duration: 0.6,
+          ease: "easeOut",
+          staggerChildren: 0.2,
+        }}
+        viewport={{ once: true }}
+        className="relative mx-auto my-auto lg:grid lg:grid-cols-5">
         <div className="px-10 py-8 lg:col-span-2 lg:px-auto lg:py-auto ">
           <div className="max-w-lg mx-auto">
             <h2 className="text-3xl font-medium tracking-tight sm:text-4xl">Get in touch!</h2>
