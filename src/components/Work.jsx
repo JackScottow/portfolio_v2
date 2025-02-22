@@ -101,9 +101,23 @@ export const projects = [
 const Work = () => {
   return (
     <div className="min-h-screen" id="work">
-      <div className="px-6 py-12 mx-auto max-w-7xl lg:px-8">
-        <motion.div initial={{ x: -350 }} whileInView={{ x: 0 }} transition={{ duration: 0.25 }} viewport={{ once: true }} className="mb-12">
-          <h2 className="text-4xl font-bold tracking-tight text-gray-900 dark:text-white">My Work</h2>
+      <div className="px-6 py-24 mx-auto max-w-7xl lg:px-8">
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{
+            duration: 0.5,
+            ease: "easeOut",
+            staggerChildren: 0.2,
+          }}
+          viewport={{ once: true }}
+          className="mb-12">
+          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
+            <span className="text-teal-300">My</span> Work
+          </motion.h2>
+          <motion.p initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="text-lg text-gray-300">
+            Here are some of my recent projects. Each one represents different challenges and learning experiences.
+          </motion.p>
         </motion.div>
 
         <ul role="list" className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
