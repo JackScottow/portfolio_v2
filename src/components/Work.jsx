@@ -23,6 +23,16 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/codecache",
     liveUrl: "https://codecache.jackscottow.com",
   },
+
+  {
+    name: "StrongViz",
+    tech: "NextJS / TailwindCSS / TypeScript / Recharts",
+    imageUrl: "../project_images/strongviz.png",
+    description: "Modern web app for visualizing Strong App workout data with interactive charts and exercise analytics",
+    githubUrl: "https://github.com/JackScottow/strong-viz",
+    liveUrl: "https://strongviz.jackscottow.com",
+  },
+
   {
     name: "UberServe",
     tech: "NextJS / TailwindCSS",
