@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
-import { motion, useInView, useAnimate } from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -118,21 +118,12 @@ export const projects = [
 const Work = () => {
   return (
     <section id="work" className="min-h-screen flex items-center px-6 py-10 sm:px-28">
-      <div className=" mx-auto max-w-7xl lg:px-8">
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.5,
-            ease: "easeOut",
-            staggerChildren: 0.2,
-          }}
-          viewport={{ once: true }}
-          className="mb-12">
-          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.2 }} className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
+      <div className="mx-auto max-w-7xl lg:px-8">
+        <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} viewport={{ once: true }} className="mb-12">
+          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, delay: 0.2 }} viewport={{ once: true }} className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
             <span className="text-teal-300">My</span> Work
           </motion.h2>
-          <motion.p initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.5, delay: 0.4 }} className="text-lg text-gray-300">
+          <motion.p initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, delay: 0.4 }} viewport={{ once: true }} className="text-lg text-gray-300">
             Here are some of my recent projects. Each one represents different challenges and learning experiences.
           </motion.p>
         </motion.div>
@@ -140,19 +131,19 @@ const Work = () => {
         <ul role="list" className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
           {projects.map((project, index) => (
             <motion.div
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
+              key={project.name}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{
-                duration: 0.3,
-                delay: index * 0.05,
+                duration: 0.5,
+                delay: index * 0.1,
                 ease: "easeOut",
               }}
               whileHover={{
                 scale: 1.02,
                 transition: { duration: 0.2 },
               }}
-              viewport={{ once: true }}
-              key={project.name}>
+              viewport={{ once: true }}>
               <Link href={`/projects/${project.name.toLowerCase().replace(/\s+/g, "-")}`}>
                 <li className="group h-full overflow-hidden transition-all duration-300 bg-white rounded-lg shadow-lg dark:bg-gray-800 hover:shadow-2xl hover:scale-105 cursor-pointer border border-gray-200 dark:border-gray-700">
                   <div className="flex flex-col h-full">
