@@ -22,7 +22,6 @@ const Sidebar = () => {
       {/* Desktop Sidebar */}
       <aside className="sticky top-0 flex-col justify-between flex-shrink-0 hidden h-screen text-gray-300 border-r w-52 bg-slate-900 md:flex border-r-teal-300">
         {/* Sidebar content */}
-        {/* Add your sidebar navigation links here */}
         <ul className="hidden md:block">
           <Link href="#home" alt="home">
             <li className="grid grid-cols-2 py-5 text-xl font-medium transition-all duration-300 ease-in-out border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
@@ -54,8 +53,6 @@ const Sidebar = () => {
               <FontAwesomeIcon icon={faScroll} size={"1x"} className="m-auto" /> CV
             </li>
           </Link>
-
-          {/* Add more links as needed */}
         </ul>
         <div className="flex flex-col items-center py-10">
           <Tooltip content={<p className="text-sm rounded-md bg-slate-900">GitHub</p>} delay={0} closeDelay={0} placement="right" containerPadding={0} offset={0}>
@@ -77,59 +74,78 @@ const Sidebar = () => {
       </aside>
 
       {/* Mobile Drawer */}
+      <div className={`fixed inset-0 bg-slate-900/95 backdrop-blur-sm z-40 md:hidden transition-all duration-300 ease-in-out ${isMobileDrawerOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"}`}>
+        <div className={`flex flex-col h-full w-full transition-transform duration-300 ease-in-out ${isMobileDrawerOpen ? "translate-y-0" : "-translate-y-8"}`}>
+          {/* Close button */}
+          <div className="flex justify-end p-6">
+            <button onClick={closeMobileDrawer} className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 text-gray-300 hover:bg-teal-300 hover:text-slate-900 transition-all duration-200" aria-label="Close menu">
+              <FontAwesomeIcon icon={faXmark} size="lg" />
+            </button>
+          </div>
 
-      <div className={`${isMobileDrawerOpen ? "translate-y-0 top-0" : " -translate-y-full -top-full"} fixed  right-0 bg-slate-900 text-gray-100 h-fit w-full transition-transform duration-250 ease-in-out border-b border-teal-300 z-40`}>
-        <ul className="pt-16 text-center">
-          <Link href="#home" onClick={closeMobileDrawer} alt="home">
-            <li className="py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900">
-              <FontAwesomeIcon icon={faHouseChimney} size={"1x"} /> Home
-            </li>
-          </Link>
+          {/* Navigation Links */}
+          <nav className="flex-1 flex flex-col justify-center">
+            <ul className="space-y-2 px-8">
+              <li>
+                <Link href="#home" onClick={closeMobileDrawer} className="flex items-center gap-4 p-4 text-xl font-medium rounded-lg transition-all duration-200 hover:bg-teal-300 hover:text-slate-900">
+                  <FontAwesomeIcon icon={faHouseChimney} className="w-6" />
+                  <span>Home</span>
+                </Link>
+              </li>
 
-          <Link href="#about" onClick={closeMobileDrawer} alt="about">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
-              <FontAwesomeIcon icon={faQuestion} size={"1x"} /> About
-            </li>
-          </Link>
+              <li>
+                <Link href="#about" onClick={closeMobileDrawer} className="flex items-center gap-4 p-4 text-xl font-medium rounded-lg transition-all duration-200 hover:bg-teal-300 hover:text-slate-900">
+                  <FontAwesomeIcon icon={faQuestion} className="w-6" />
+                  <span>About</span>
+                </Link>
+              </li>
 
-          <Link href="#work" onClick={closeMobileDrawer} alt="work">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900">
-              <FontAwesomeIcon icon={faLaptopCode} size={"1x"} /> Work
-            </li>
-          </Link>
+              <li>
+                <Link href="#work" onClick={closeMobileDrawer} className="flex items-center gap-4 p-4 text-xl font-medium rounded-lg transition-all duration-200 hover:bg-teal-300 hover:text-slate-900">
+                  <FontAwesomeIcon icon={faLaptopCode} className="w-6" />
+                  <span>Work</span>
+                </Link>
+              </li>
 
-          <Link href="#contact" onClick={closeMobileDrawer} alt="contact">
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-t-2 border-solid border-t-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
-              <FontAwesomeIcon icon={faAddressCard} size={"1x"} /> Contact
-            </li>
-          </Link>
+              <li>
+                <Link href="#contact" onClick={closeMobileDrawer} className="flex items-center gap-4 p-4 text-xl font-medium rounded-lg transition-all duration-200 hover:bg-teal-300 hover:text-slate-900">
+                  <FontAwesomeIcon icon={faAddressCard} className="w-6" />
+                  <span>Contact</span>
+                </Link>
+              </li>
 
-          <Link href="../jackscottow_cv.pdf" target="_blank" alt="CV" onClick={closeMobileDrawer}>
-            <li className="px-10 py-5 text-xl font-medium transition-all duration-300 ease-in border-solid border-y-2 border-y-slate-800 hover:bg-teal-300 hover:text-slate-900 ">
-              <FontAwesomeIcon icon={faScroll} size={"1x"} /> CV
-            </li>
-          </Link>
+              <li>
+                <Link href="../jackscottow_cv.pdf" target="_blank" onClick={closeMobileDrawer} className="flex items-center gap-4 p-4 text-xl font-medium rounded-lg transition-all duration-200 hover:bg-teal-300 hover:text-slate-900">
+                  <FontAwesomeIcon icon={faScroll} className="w-6" />
+                  <span>CV</span>
+                </Link>
+              </li>
+            </ul>
+          </nav>
 
-          {/* Add more links as needed */}
-        </ul>
-        <div className="flex gap-6 px-8 py-6 justify-evenly">
-          <Link href="https://github.com/JackScottow" target="_blank" alt="github" className="w-fit transition duration-300 ease-in hover:text-teal-300 hover:scale-110">
-            <FontAwesomeIcon icon={faGithub} size="xl" />
-          </Link>
-          <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" alt="linkedin" className="w-fit transition duration-300 ease-in hover:text-teal-300 hover:scale-110">
-            <FontAwesomeIcon icon={faLinkedin} size="xl" />
-          </Link>
-          <Link href="mailto:j.scottow@gmail.com" target="_blank" alt="email" className="w-fit transition duration-300 ease-in hover:text-teal-300 hover:scale-110">
-            <FontAwesomeIcon icon={faEnvelopeOpen} size="xl" />
-          </Link>
+          {/* Social Links */}
+          <div className="p-8">
+            <div className="flex justify-center gap-8 py-4 border-t border-slate-800">
+              <Link href="https://github.com/JackScottow" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 text-gray-300 transition-all duration-200 hover:bg-teal-300 hover:text-slate-900 hover:scale-110">
+                <FontAwesomeIcon icon={faGithub} size="lg" />
+              </Link>
+
+              <Link href="https://www.linkedin.com/in/jack-scottow/" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 text-gray-300 transition-all duration-200 hover:bg-teal-300 hover:text-slate-900 hover:scale-110">
+                <FontAwesomeIcon icon={faLinkedin} size="lg" />
+              </Link>
+
+              <Link href="mailto:j.scottow@gmail.com" target="_blank" className="w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 text-gray-300 transition-all duration-200 hover:bg-teal-300 hover:text-slate-900 hover:scale-110">
+                <FontAwesomeIcon icon={faEnvelopeOpen} size="lg" />
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Mobile Toggle Button */}
-      <div className="fixed top-0 right-0 z-50 w-full md:hidden">
-        <div></div>
-        <button className="fixed top-0 right-0 p-5 rounded-xl focus:outline-none" onClick={toggleMobileDrawer}>
-          {isMobileDrawerOpen ? <FontAwesomeIcon icon={faXmark} size="xl" className="text-gray-300" /> : <FontAwesomeIcon icon={faBars} size="xl" className="text-gray-300" />}
+      <div className={`fixed top-0 right-0 z-50 md:hidden transition-opacity duration-300 ${isMobileDrawerOpen ? "opacity-0 pointer-events-none" : "opacity-100 pointer-events-auto"}`}>
+        <button className="m-6 w-12 h-12 flex items-center justify-center rounded-full bg-slate-800 text-gray-300 hover:bg-teal-300 hover:text-slate-900 transition-all duration-200 shadow-lg" onClick={toggleMobileDrawer} aria-label="Open menu">
+          <FontAwesomeIcon icon={faBars} size="lg" />
         </button>
       </div>
     </div>
