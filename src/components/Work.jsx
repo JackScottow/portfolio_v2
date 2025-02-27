@@ -7,6 +7,15 @@ import Image from "next/image";
 
 export const projects = [
   {
+    name: "StrongViz",
+    tech: "NextJS / TailwindCSS / TypeScript / Recharts",
+    imageUrl: "../project_images/strongviz.png",
+    description: "Modern web app for visualizing Strong App workout data with interactive charts and exercise analytics",
+    githubUrl: "https://github.com/JackScottow/strong-viz",
+    liveUrl: "https://strongviz.jackscottow.com",
+  },
+
+  {
     name: "NextBook",
     tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
     imageUrl: "../project_images/nextbook.png",
@@ -25,15 +34,6 @@ export const projects = [
   },
 
   {
-    name: "StrongViz",
-    tech: "NextJS / TailwindCSS / TypeScript / Recharts",
-    imageUrl: "../project_images/strongviz.png",
-    description: "Modern web app for visualizing Strong App workout data with interactive charts and exercise analytics",
-    githubUrl: "https://github.com/JackScottow/strong-viz",
-    liveUrl: "https://strongviz.jackscottow.com",
-  },
-
-  {
     name: "UberServe",
     tech: "NextJS / TailwindCSS",
     imageUrl: "../project_images/uberserve.png",
@@ -41,6 +41,7 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/uberserve-nextjs-landing-page",
     liveUrl: "https://uberserve.jackscottow.com",
   },
+
   {
     name: "Wordle Clone",
     tech: "React / TailwindCSS",
@@ -49,6 +50,7 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/Wordle",
     liveUrl: "https://wordle.jackscottow.com",
   },
+
   {
     name: "QR Code Generator",
     tech: "NextJS / Typescript / TailwindCSS",
@@ -57,6 +59,7 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/qr-code-generator",
     liveUrl: "https://qr.jackscottow.com",
   },
+
   {
     name: "Dynamic Landing Page",
     tech: "HTML / JS / CSS",
@@ -74,6 +77,7 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/rock-paper-scissors",
     liveUrl: "https://rockpaperscissors.jackscottow.com/",
   },
+
   {
     name: "DVDShop",
     tech: "React / Bootstrap / TMDB API",
@@ -82,6 +86,7 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/dvd-shop-ecommerce",
     liveUrl: "https://dvdshop.jackscottow.com/",
   },
+
   {
     name: "Tic Tac Toe",
     tech: "HTML / JS / CSS",
@@ -90,6 +95,7 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/Tic-Tac-Toe",
     liveUrl: "https://tictactoe.jackscottow.com/",
   },
+
   {
     name: "Portfolio",
     tech: "NextJS / TailwindCSS",
@@ -98,6 +104,7 @@ export const projects = [
     githubUrl: "https://github.com/JackScottow/portfolio_v2",
     liveUrl: "https://jackscottow.com/",
   },
+
   {
     name: "Wisdom Oracle",
     tech: "HTML / JS / CSS / AdviceSlip API",
@@ -110,8 +117,8 @@ export const projects = [
 
 const Work = () => {
   return (
-    <div className="min-h-screen" id="work">
-      <div className="px-6 py-24 mx-auto max-w-7xl lg:px-8">
+    <section id="work" className="min-h-screen flex items-center px-6 py-10 sm:px-28">
+      <div className=" mx-auto max-w-7xl lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -175,7 +182,7 @@ const Work = () => {
           ))}
         </ul>
       </div>
-    </div>
+    </section>
   );
 };
 

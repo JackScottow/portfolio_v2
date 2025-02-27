@@ -7,7 +7,7 @@ const skills = ["HTML/CSS/JS", "React/NextJS", "TypeScript", "SASS/SCSS", "NodeJ
 
 const About = () => {
   return (
-    <section id="about" className="min-h-screen flex items-center px-6 py-auto sm:px-28">
+    <section id="about" className="min-h-screen flex items-center px-6 py-10 py-auto sm:px-28">
       <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }} viewport={{ once: true }} className="max-w-4xl mx-auto">
         <h2 className="mb-8 text-3xl font-bold tracking-tight sm:text-4xl">
           <span className="text-teal-300">About</span> Me
