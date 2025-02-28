@@ -57,10 +57,10 @@ const Sidebar = () => {
   };
 
   const navItems = [
-    { href: "#home", icon: faHouseChimney, label: "Home", id: "home" },
-    { href: "#about", icon: faQuestion, label: "About", id: "about" },
-    { href: "#work", icon: faLaptopCode, label: "Work", id: "work" },
-    { href: "#contact", icon: faAddressCard, label: "Contact", id: "contact" },
+    { href: "/#home", icon: faHouseChimney, label: "Home", id: "home" },
+    { href: "/#about", icon: faQuestion, label: "About", id: "about" },
+    { href: "/#work", icon: faLaptopCode, label: "Work", id: "work" },
+    { href: "/#contact", icon: faAddressCard, label: "Contact", id: "contact" },
     { href: "../jackscottow_cv.pdf", icon: faScroll, label: "CV", id: "cv", isExternal: true },
   ];
 
