@@ -6,6 +6,7 @@
   --foreground-rgb: 94, 234, 212;
   --background-start-rgb: 17, 24, 39;
   --background-end-rgb: 49, 46, 129;
+  --cursor-color: rgb(94, 234, 212);
 }
 
 /* slate 900 */
@@ -16,19 +17,13 @@
     --foreground-rgb: 94, 234, 212;
     --background-start-rgb: 17, 24, 39;
     --background-end-rgb: 49, 46, 129;
+    --cursor-color: rgb(94, 234, 212);
   }
 }
 
 body {
   color: rgb(var(--foreground-rgb));
   background-color: rgb(15, 23, 42);
-}
-
-/* Typography improvements */
-.heading-gradient {
-  background: linear-gradient(to right, rgb(94, 234, 212), rgb(49, 46, 129));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 
 /* Improved text readability */
@@ -50,11 +45,28 @@ h3 {
   animation: fadeIn 0.5s ease forwards;
 }
 
+/* Custom typewriter cursor styling for react-simple-typewriter */
+.Typewriter__cursor {
+  color: var(--cursor-color) !important;
+  font-weight: 500 !important;
+  animation: blink 0.8s infinite !important;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
   to {
     opacity: 1;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
   }
 }
