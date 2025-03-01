@@ -46,32 +46,6 @@ const About = () => {
             </div>
           </div>
 
-          <div className="mt-8">
-            <div className="grid gap-4 md:grid-cols-3">
-              <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3 }} viewport={{ once: true }} className="h-full">
-                <ul className="space-y-2 text-gray-400 text-center">
-                  <li>✓ Modern React Development</li>
-                  <li>✓ Next.js Applications</li>
-                  <li>✓ TypeScript Implementation</li>
-                </ul>
-              </motion.div>
-              <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.1 }} viewport={{ once: true }} className="h-full">
-                <ul className="space-y-2 text-gray-400 text-center">
-                  <li>✓ Responsive Web Design</li>
-                  <li>✓ Tailwind CSS Styling</li>
-                  <li>✓ Database Integration</li>
-                </ul>
-              </motion.div>
-              <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.2 }} viewport={{ once: true }} className="h-full">
-                <ul className="space-y-2 text-gray-400 text-center">
-                  <li>✓ API Development</li>
-                  <li>✓ Version Control (Git)</li>
-                  <li>✓ Performance Optimization</li>
-                </ul>
-              </motion.div>
-            </div>
-          </div>
-
           <motion.h3 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.3, delay: 0.2 }} viewport={{ once: true }} className="mt-12 mb-6 text-2xl font-semibold">
             Technologies I work with
           </motion.h3>
