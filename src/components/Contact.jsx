@@ -4,8 +4,19 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { Tooltip } from "@nextui-org/react";
 import { motion } from "framer-motion";
+import { useForm } from "react-hook-form";
 
 const Contact = () => {
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log("Form submitted with data:", data);
+  };
+
   return (
     <div className="flex min-h-screen" id="contact">
       <motion.div
@@ -46,24 +57,40 @@ const Contact = () => {
         </div>
         <motion.div initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.2 }} viewport={{ once: true }} className="px-6 py-8 text-black lg:col-span-3 lg:py-auto lg:px-8 xl:pl-12">
           <div className="max-w-lg mx-auto lg:max-w-none">
-            <form action="https://formspree.io/f/xdkejjwv" method="POST" className="grid grid-cols-1 gap-y-2">
+            <form onSubmit={handleSubmit(onSubmit)} action="https://formspree.io/f/xdkejjwv" method="POST" className="grid grid-cols-1 gap-y-2">
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.3 }} viewport={{ once: true }}>
                 <label htmlFor="name" className="sr-only">
                   Name
                 </label>
-                <input type="text" name="name" id="name" autoComplete="name" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-2 border-teal-300 rounded shadow-sm " placeholder="Name" />
+                <input type="text" id="name" autoComplete="name" className={`box-border block w-full px-4 py-3 placeholder-gray-400 border-2 ${errors.name ? "border-red-500" : "border-teal-300"} rounded shadow-sm`} placeholder="Name" {...register("name", { required: "Name is required" })} />
+                {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name.message}</p>}
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.4 }} viewport={{ once: true }}>
                 <label htmlFor="email" className="sr-only">
                   Email
                 </label>
-                <input id="email" name="email" type="email" autoComplete="email" className="box-border block w-full px-4 py-3 placeholder-gray-400 border-2 border-teal-300 rounded shadow-sm " placeholder="Email" />
+                <input
+                  id="email"
+                  type="email"
+                  autoComplete="email"
+                  className={`box-border block w-full px-4 py-3 placeholder-gray-400 border-2 ${errors.email ? "border-red-500" : "border-teal-300"} rounded shadow-sm`}
+                  placeholder="Email"
+                  {...register("email", {
+                    required: "Email is required",
+                    pattern: {
+                      value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i,
+                      message: "Invalid email address",
+                    },
+                  })}
+                />
+                {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email.message}</p>}
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.5 }} viewport={{ once: true }}>
                 <label htmlFor="message" className="sr-only">
                   Message
                 </label>
-                <textarea id="message" name="message" rows={4} className="box-border block w-full px-4 py-3 placeholder-gray-400 border-2 border-teal-300 rounded shadow-sm resize-none" placeholder="Message" />
+                <textarea id="message" rows={4} className={`box-border block w-full px-4 py-3 placeholder-gray-400 border-2 ${errors.message ? "border-red-500" : "border-teal-300"} rounded shadow-sm resize-none`} placeholder="Message" {...register("message", { required: "Message is required" })} />
+                {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message.message}</p>}
               </motion.div>
               <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.3, delay: 0.6 }} viewport={{ once: true }} className="flex">
                 <button type="submit" className="inline-flex justify-center px-6 py-3 mx-auto font-medium bg-teal-300 border border-transparent rounded shadow-sm text-slate-900 hover:scale-105 focus:outline-none active:scale-100">
