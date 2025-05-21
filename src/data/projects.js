@@ -72,15 +72,6 @@ export const projects = [
   },
 
   {
-    name: "Rock Paper Scissors",
-    tech: "React",
-    imageUrl: "../project_images/rockpaperscissors.png",
-    description: "Classic game with animated interactions and score tracking system",
-    githubUrl: "https://github.com/JackScottow/rock-paper-scissors",
-    liveUrl: "https://rockpaperscissors.jackscottow.com/",
-  },
-
-  {
     name: "DVDShop",
     tech: "React / Bootstrap / TMDB API",
     imageUrl: "../project_images/dvdshop.png",
