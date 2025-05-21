@@ -114,7 +114,7 @@ const Work = () => {
           </button>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{ opacity: 0, scale: 0.25 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
               type: "spring",
