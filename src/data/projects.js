@@ -9,6 +9,15 @@ export const projects = [
   },
 
   {
+    name: "EasyRSVP",
+    tech: "NextJS / TypeScript / TailwindCSS / PostgreSQL / Prisma",
+    imageUrl: "../project_images/easyrsvp.png",
+    description: "An event management application with user authentication, event creation, RSVP functionality, QR code sharing, and responsive design",
+    githubUrl: "https://github.com/JackScottow/easyRSVP",
+    liveUrl: "https://easyrsvp.jackscottow.com",
+  },
+
+  {
     name: "NextBook",
     tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
     imageUrl: "../project_images/nextbook.png",
