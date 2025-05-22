@@ -104,7 +104,7 @@ const Work = () => {
 
       {/* Project Modal - No exit animation */}
       {selectedProject && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
           {/* Close button */}
           <button
             onClick={() => setSelectedProject(null)}
@@ -122,7 +122,7 @@ const Work = () => {
               stiffness: 300,
             }}
             ref={modalRef}
-            className="bg-white dark:bg-gray-800 rounded-xl shadow-2xl max-w-7xl w-full h-auto flex flex-col max-h-[95vh]">
+            className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 shadow-2xl max-w-7xl w-full h-auto flex flex-col max-h-[95vh]">
             {/* Top - Image */}
             <div className="w-full overflow-hidden rounded-t-xl bg-gray-900">
               <img src={selectedProject.imageUrl} alt={selectedProject.name} className="w-full object-contain max-h-[50vh] mx-auto" />
