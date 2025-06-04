@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
-import { faUpRightFromSquare, faTimes } from "@fortawesome/free-solid-svg-icons";
+import { faUpRightFromSquare, faTimes, faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
@@ -9,6 +9,8 @@ import { projects } from "../data/projects";
 const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const modalRef = useRef(null);
+  // Add your GitHub profile URL here
+  const githubProfileUrl = "https://github.com/YOUR_USERNAME";
 
   // Close modal when clicking outside
   useEffect(() => {
@@ -99,6 +101,37 @@ const Work = () => {
               </div>
             </motion.div>
           ))}
+
+          {/* View More Projects Card */}
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{
+              duration: 0.5,
+              delay: projects.length * 0.1,
+              ease: "easeOut",
+            }}
+            viewport={{ once: true }}
+            className="h-full">
+            <Link href={githubProfileUrl} target="_blank" className="block h-full">
+              <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden h-full group">
+                <div className="flex flex-col h-full">
+                  <div className="relative aspect-[16/9] overflow-hidden border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-teal-500 to-blue-500 flex items-center justify-center">
+                    <FontAwesomeIcon icon={faGithub} className="h-20 w-20 text-white opacity-75 group-hover:scale-110 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
+                  </div>
+                  <div className="flex flex-col flex-grow p-6 items-center justify-center text-center">
+                    <h3 className="mb-3 text-xl font-semibold text-gray-900 dark:text-white group-hover:text-teal-600 dark:group-hover:text-teal-400 transition-colors">View More Projects</h3>
+                    <p className="mb-6 text-gray-600 dark:text-gray-300 text-sm md:text-base">Explore the rest of my work on GitHub</p>
+                    <div className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 text-white rounded-lg group-hover:bg-teal-700 transition-colors dark:bg-teal-500 dark:group-hover:bg-teal-600 text-base font-medium mt-auto">
+                      <span>Visit GitHub</span>
+                      <FontAwesomeIcon icon={faArrowRight} className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </motion.div>
         </div>
       </div>
 
