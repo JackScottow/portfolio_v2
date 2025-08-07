@@ -35,14 +35,14 @@ export const projects = [
     liveUrl: "https://codecache.jackscottow.com",
   },
 
-  {
-    name: "NextBook",
-    tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
-    imageUrl: "../project_images/nextbook.png",
-    description: "A modern social media app with user authentication, real-time chat, media uploads and a responsive UI",
-    githubUrl: "https://github.com/JackScottow/nextjs-15-social-media-app",
-    liveUrl: "https://nextbook.jackscottow.com",
-  },
+  // {
+  //   name: "NextBook",
+  //   tech: "NextJS / Typescript / TailwindCSS / PostgreSQL / Express / Prisma ",
+  //   imageUrl: "../project_images/nextbook.png",
+  //   description: "A modern social media app with user authentication, real-time chat, media uploads and a responsive UI",
+  //   githubUrl: "https://github.com/JackScottow/nextjs-15-social-media-app",
+  //   liveUrl: "https://nextbook.jackscottow.com",
+  // },
 
   {
     name: "UberServe",
@@ -80,32 +80,32 @@ export const projects = [
     liveUrl: "https://dynamic-landing-page.jackscottow.com/",
   },
 
-  {
-    name: "DVDShop",
-    tech: "React / Bootstrap / TMDB API",
-    imageUrl: "../project_images/dvdshop.png",
-    description: "Movie e-commerce platform with TMDB integration and shopping cart functionality",
-    githubUrl: "https://github.com/JackScottow/dvd-shop-ecommerce",
-    liveUrl: "https://dvdshop.jackscottow.com/",
-  },
+  // {
+  //   name: "DVDShop",
+  //   tech: "React / Bootstrap / TMDB API",
+  //   imageUrl: "../project_images/dvdshop.png",
+  //   description: "Movie e-commerce platform with TMDB integration and shopping cart functionality",
+  //   githubUrl: "https://github.com/JackScottow/dvd-shop-ecommerce",
+  //   liveUrl: "https://dvdshop.jackscottow.com/",
+  // },
 
-  {
-    name: "Tic Tac Toe",
-    tech: "HTML / JS / CSS",
-    imageUrl: "../project_images/tictactoe.png",
-    description: "Interactive two-player game with win detection and score tracking",
-    githubUrl: "https://github.com/JackScottow/Tic-Tac-Toe",
-    liveUrl: "https://tictactoe.jackscottow.com/",
-  },
+  // {
+  //   name: "Tic Tac Toe",
+  //   tech: "HTML / JS / CSS",
+  //   imageUrl: "../project_images/tictactoe.png",
+  //   description: "Interactive two-player game with win detection and score tracking",
+  //   githubUrl: "https://github.com/JackScottow/Tic-Tac-Toe",
+  //   liveUrl: "https://tictactoe.jackscottow.com/",
+  // },
 
-  {
-    name: "Portfolio",
-    tech: "NextJS / TailwindCSS",
-    imageUrl: "../project_images/portfolio.png",
-    description: "Personal portfolio showcasing projects with responsive design",
-    githubUrl: "https://github.com/JackScottow/portfolio_v2",
-    liveUrl: "https://jackscottow.com/",
-  },
+  // {
+  //   name: "Portfolio",
+  //   tech: "NextJS / TailwindCSS",
+  //   imageUrl: "../project_images/portfolio.png",
+  //   description: "Personal portfolio showcasing projects with responsive design",
+  //   githubUrl: "https://github.com/JackScottow/portfolio_v2",
+  //   liveUrl: "https://jackscottow.com/",
+  // },
 
   {
     name: "Wisdom Oracle",
