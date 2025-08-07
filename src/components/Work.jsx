@@ -10,7 +10,7 @@ const Work = () => {
   const [selectedProject, setSelectedProject] = useState(null);
   const modalRef = useRef(null);
   // Add your GitHub profile URL here
-  const githubProfileUrl = "https://github.com/YOUR_USERNAME";
+  const githubProfileUrl = "https://github.com/JackScottow/";
 
   // Close modal when clicking outside
   useEffect(() => {
