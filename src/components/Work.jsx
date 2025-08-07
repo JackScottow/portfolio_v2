@@ -78,7 +78,7 @@ const Work = () => {
               <div onClick={() => openProject(project)} className="cursor-pointer bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden h-full">
                 {/* Card Content */}
                 <div className="flex flex-col h-full">
-                  <div className="relative aspect-[16/9] overflow-hidden border-b border-gray-200 dark:border-gray-700">
+                  <div className="relative  overflow-hidden border-b border-gray-200 dark:border-gray-700">
                     <img className="h-full w-full object-cover transition-transform duration-500 hover:scale-110" src={project.imageUrl} alt={project.name} />
                     <div className="absolute inset-0 bg-black/0 hover:bg-black/20 transition-all duration-300" />
                   </div>
@@ -116,7 +116,7 @@ const Work = () => {
             <Link href={githubProfileUrl} target="_blank" className="block h-full">
               <div className="bg-white dark:bg-gray-800 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-200 dark:border-gray-700 overflow-hidden h-full group">
                 <div className="flex flex-col h-full">
-                  <div className="relative aspect-[16/9] overflow-hidden border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-teal-500 to-blue-500 flex items-center justify-center">
+                  <div className="relative aspect-[16/10] overflow-hidden border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-teal-500 to-blue-500 flex items-center justify-center">
                     <FontAwesomeIcon icon={faGithub} className="h-20 w-20 text-white opacity-75 group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300" />
                   </div>
@@ -135,7 +135,7 @@ const Work = () => {
         </div>
       </div>
 
-      {/* Project Modal - No exit animation */}
+      {/* Project Modal - Enhanced horizontal layout */}
       {selectedProject && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80">
           {/* Close button */}
@@ -155,32 +155,37 @@ const Work = () => {
               stiffness: 300,
             }}
             ref={modalRef}
-            className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 shadow-2xl max-w-7xl w-full h-auto flex flex-col max-h-[95vh]">
-            {/* Top - Image */}
-            <div className="w-full overflow-hidden rounded-t-xl bg-gray-900">
-              <img src={selectedProject.imageUrl} alt={selectedProject.name} className="w-full object-contain max-h-[50vh] mx-auto" />
+            className="bg-white dark:bg-gray-800 rounded-xl border border-gray-200 shadow-2xl max-w-4xl md:max-w-[90vw] w-full h-auto flex flex-col md:flex-row max-h-[95vh]">
+            {/* Top/Left - Screenshot */}
+            <div className="w-full md:flex-[2] overflow-hidden rounded-t-xl md:rounded-r-none md:rounded-xl border-b-2 md:border-r-2 md:border-b-0 border-gray-200  bg-gray-900 flex items-center justify-center">
+              <img src={selectedProject.imageUrl} alt={selectedProject.name} className="max-w-full max-h-full object-contain" />
             </div>
 
-            {/* Bottom - Content (scrollable) */}
-            <div className="flex-1 p-8 md:p-12 overflow-y-auto">
-              <div>
-                <h2 className="text-3xl md:text-5xl font-bold md:text-start text-center text-gray-900 dark:text-white mb-4">{selectedProject.name}</h2>
-                <p className="text-lg md:text-xl font-medium text-teal-600 md:text-start text-center dark:text-teal-400 mb-6">{selectedProject.tech}</p>
+            {/* Bottom/Right - Info Panel */}
+            <div className="w-full md:flex-[1] flex flex-col rounded-b-xl md:rounded-b-none md:rounded-r-xl bg-white dark:bg-gray-800">
+              {/* Header */}
+              <div className="p-6 pb-4 border-b border-gray-200 dark:border-gray-700">
+                <h2 className="text-2xl lg:text-3xl font-bold text-gray-900 dark:text-white mb-2 leading-tight">{selectedProject.name}</h2>
+                <p className="text-base lg:text-lg font-medium text-teal-600 dark:text-teal-400">{selectedProject.tech}</p>
+              </div>
 
-                <div className="prose lg:prose-xl dark:prose-invert max-w-none mb-10">
-                  <p className="text-gray-600 dark:text-gray-300 text-lg md:text-xl md:text-start text-center">{selectedProject.description}</p>
-                  {selectedProject.longDescription && <p className="text-gray-600 dark:text-gray-300 mt-5 text-lg md:text-xl">{selectedProject.longDescription}</p>}
+              {/* Content */}
+              <div className="flex-1 p-6 overflow-y-auto">
+                <div className="space-y-4">
+                  <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">{selectedProject.description}</p>
+                  {selectedProject.longDescription && <p className="text-gray-600 dark:text-gray-300 text-base leading-relaxed">{selectedProject.longDescription}</p>}
                 </div>
               </div>
 
-              <div className="flex flex-col sm:flex-row gap-6 mt-6">
-                <Link href={selectedProject.githubUrl} target="_blank" className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 text-base font-medium">
-                  <FontAwesomeIcon icon={faGithub} className="w-5 h-5" />
-                  View Source
+              {/* Action Buttons */}
+              <div className="p-6 pt-0 space-y-3 border-t border-gray-200 dark:border-gray-700">
+                <Link href={selectedProject.githubUrl} target="_blank" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 text-sm font-medium">
+                  <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
+                  View Source Code
                 </Link>
-                <Link href={selectedProject.liveUrl} target="_blank" className="flex-1 inline-flex items-center justify-center gap-2 px-5 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors dark:bg-teal-500 dark:hover:bg-teal-600 text-base font-medium">
-                  <FontAwesomeIcon icon={faUpRightFromSquare} className="w-5 h-5" />
-                  Live Demo
+                <Link href={selectedProject.liveUrl} target="_blank" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors dark:bg-teal-500 dark:hover:bg-teal-600 text-sm font-medium">
+                  <FontAwesomeIcon icon={faUpRightFromSquare} className="w-4 h-4" />
+                  View Live Demo
                 </Link>
               </div>
             </div>
