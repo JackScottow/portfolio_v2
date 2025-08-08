@@ -4,7 +4,7 @@ export const projects = [
     tech: "NextJS / TailwindCSS / TypeScript / PostgreSQL / WebGL",
     imageUrl: "../project_images/cargofy.png",
     description: "Fully integrated e-commerce PIM / WMS / OMS and shipping system",
-    githubUrl: "https://github.com/JackScottow/cargofy",
+    githubUrl: "closed",
     liveUrl: "https://cargofy.jackscottow.com/",
   },
 

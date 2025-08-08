@@ -87,10 +87,17 @@ const Work = () => {
                     <p className="hidden sm:block mb-2.5 text-sm font-medium text-teal-600 dark:text-teal-400">{project.tech}</p>
                     <p className="hidden sm:block mb-4 text-gray-600 dark:text-gray-300 line-clamp-3 text-sm md:text-base">{project.description}</p>
                     <div className="hidden sm:flex justify-center gap-3 md:gap-4 mt-auto">
-                      <Link href={project.githubUrl} target="_blank" className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 text-xs md:text-sm w-32 md:w-36" onClick={(e) => e.stopPropagation()}>
-                        <FontAwesomeIcon icon={faGithub} />
-                        View Source
-                      </Link>
+                      {project.githubUrl === "closed" ? (
+                        <div className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 text-white rounded-lg cursor-not-allowed dark:bg-gray-700 text-xs md:text-sm w-36 md:w-40" onClick={(e) => e.stopPropagation()}>
+                          <FontAwesomeIcon icon={faGithub} />
+                          Closed Source
+                        </div>
+                      ) : (
+                        <Link href={project.githubUrl} target="_blank" className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 text-xs md:text-sm w-36 md:w-40" onClick={(e) => e.stopPropagation()}>
+                          <FontAwesomeIcon icon={faGithub} />
+                          View Source
+                        </Link>
+                      )}
                       <Link href={project.liveUrl} target="_blank" className="inline-flex items-center justify-center gap-1.5 px-3 py-1.5 md:px-4 md:py-2 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors dark:bg-teal-500 dark:hover:bg-teal-600 text-xs md:text-sm w-32 md:w-36" onClick={(e) => e.stopPropagation()}>
                         <FontAwesomeIcon icon={faUpRightFromSquare} />
                         Live Demo
@@ -179,10 +186,17 @@ const Work = () => {
 
               {/* Action Buttons */}
               <div className="p-6 pt-0 space-y-3 border-t border-gray-200 dark:border-gray-700">
-                <Link href={selectedProject.githubUrl} target="_blank" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 text-sm font-medium">
-                  <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
-                  View Source Code
-                </Link>
+                {selectedProject.githubUrl === "closed" ? (
+                  <div className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gray-800 text-white rounded-lg cursor-not-allowed dark:bg-gray-700 text-sm font-medium">
+                    <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
+                    Closed Source
+                  </div>
+                ) : (
+                  <Link href={selectedProject.githubUrl} target="_blank" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition-colors dark:bg-gray-700 dark:hover:bg-gray-600 text-sm font-medium">
+                    <FontAwesomeIcon icon={faGithub} className="w-4 h-4" />
+                    View Source Code
+                  </Link>
+                )}
                 <Link href={selectedProject.liveUrl} target="_blank" className="w-full inline-flex items-center justify-center gap-2 px-4 py-3 bg-teal-600 text-white rounded-lg hover:bg-teal-700 transition-colors dark:bg-teal-500 dark:hover:bg-teal-600 text-sm font-medium">
                   <FontAwesomeIcon icon={faUpRightFromSquare} className="w-4 h-4" />
                   View Live Demo
