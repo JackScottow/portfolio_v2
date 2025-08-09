@@ -1,7 +1,7 @@
 export const projects = [
   {
     name: "Cargofy",
-    tech: "NextJS / TailwindCSS / TypeScript / PostgreSQL / WebGL",
+    tech: "NextJS / TailwindCSS / TypeScript / PostgreSQL / GraphQL",
     imageUrl: "../project_images/cargofy.png",
     description: "Fully integrated e-commerce PIM / WMS / OMS and shipping system",
     githubUrl: "closed",
